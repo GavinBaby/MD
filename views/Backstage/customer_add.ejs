@@ -1,0 +1,132 @@
+<div id="product_add_page">
+    <!--start-->
+    <ol class="breadcrumb">
+        <div style="text-align: center;font-size: 16px;font-weight:bold;">客户登记</div>
+    </ol>
+    <div class="main-box main-box-noborder overflow-hidden" style="padding-top: 12px;padding-left: 20px;">
+        <form class="form-horizontal" action="" method="post"   id="customer_add_form" style="margin-left: 30px;">
+
+
+            <div class="form-group">
+                <label class="w-12 control-label" style="font-family: 微软雅黑;font-size: 16px">客户编号：</label>
+                <div class="w-20 relative ">
+                    <input style="border-left-width:0px;border-top-width:0px;border-right-width:0px;border-bottom-color:black" id="product_name" class="form-control" type="text" name="home_title1" maxlength="12" value="系统自动生成" readonly>
+                </div>
+            </div>
+            <div class="form-group ">
+                <label class="control-label w-12">名称：</label>
+                <div class="w-40">
+                    <input id="name" class="form-control" type="text" name="name"   maxlength="20" value="" >
+                </div>
+            </div>
+            <div class="form-group ">
+                <label class="control-label w-12">类型：</label>
+                <div class="w-40">
+                    <select class="form-control" name="type" id="type" >
+                        <option value="1">类型一</option>
+                        <option value="2">类型二</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-group ">
+                <label class="control-label w-12">业务员：</label>
+                <div class="w-40">
+                    <select class="form-control" name="type" id="type" >
+                        <option value="1">张三</option>
+                        <option value="2">李四</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-group ">
+                <label class="control-label w-12">地址：</label>
+                <div class="w-40">
+                    <input id="address" class="form-control" type="text" name="address"   maxlength="20" value="" >
+                </div>
+            </div>
+            <div class="form-group ">
+                <label class="control-label w-12">电话号码：</label>
+                <div class="w-40">
+                    <input id="mobile" class="form-control" type="text" name="mobile"   maxlength="20" value="" >
+                </div>
+            </div>
+            <div class="form-group ">
+                <label class="control-label w-12">法人代表：</label>
+                <div class="w-40">
+                    <input id="fr" class="form-control" type="text" name="fr"   maxlength="20" value="" >
+                </div>
+            </div>
+            <div class="form-group ">
+                <label class="control-label w-12">联系人：</label>
+                <div class="w-40">
+                    <input id="lxr" class="form-control" type="text" name="lxr"   maxlength="20" value="" >
+                </div>
+            </div>
+
+            <div class="form-group ">
+                <label class="control-label w-12">税号：</label>
+                <div class="w-40">
+                    <input id="sh" class="form-control" type="text" name="sh"   maxlength="20" value="" >
+                </div>
+            </div>
+            <div class="form-group ">
+                <label class="control-label w-12">开户行：</label>
+                <div class="w-40">
+                    <input id="bank" class="form-control" type="text" name="bank"   maxlength="20" value="" >
+                </div>
+            </div>
+            <div class="form-group ">
+                <label class="control-label w-12">账号：</label>
+                <div class="w-40">
+                    <input id="account" class="form-control" type="text" name="account"   maxlength="20" value="" >
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="w-13 control-label" style="font-family: 微软雅黑;font-size: 16px">销售协议：</label>
+                <div class="roompic-upload w-12" style="margin-top: 5px;">
+                    <a id="add_top_img1" href="#" class="form-btn-upload" >上传</a>
+                    <div id="unknow" style="width:24px;height:18px;position: fixed;z-index: 999;margin: -44px 0 0 -56px;font-size:12px;overflow:hidden;color: white" hidden></div>
+                </div>
+            </div>
+        </form>
+        <div class="modal-footer pb-2" style="text-align: center;">
+            <button type="button" class="btn btn-default btn-default-green w-14 font-16 float-none" data-dismiss="modal" id="add_account_cancel">保存</button>
+            <button id="save_product" type="button" class="btn btn-success w-14 font-16 float-none ml-2" >下一步</button>
+        </div>
+        <nav class="pagination-wrap clearfix" style="height: 20px;margin-top:-22px">
+        </nav>
+    </div>
+
+    <script src="/js/backstage/customer_add.js">
+    <script>
+
+        $("#flow_img").on("click",function(){
+            $("#addAreaModal").modal('show');
+        })
+
+
+        function CloseWebPage(){
+            $(".nav-main ul .close-page").trigger("click");
+        }
+        $('.close').on('click',function(){
+            $("#addClassModal").modal('hide');
+            $("#addDataModal").modal('hide');
+            $("#addQuestionsModal").modal('hide');
+        })
+
+
+        UE.delEditor('editor');
+        //实例化编辑器
+        //建议使用工厂方法getEditor创建和引用编辑器实例，如果在某个闭包下引用该编辑器，直接调用UE.getEditor('editor')就能拿到相关的实例
+        var ue = UE.getEditor('editor');
+        function setContent(content,isAppendTo) {
+            UE.getEditor('editor').setContent(content, isAppendTo);
+        }
+        function getContent() {
+            return UE.getEditor('editor').getContent();
+        }
+
+    </script>
+    <!--私有js-->
+    <!--    <script src="js/backstage/product_add.js"></script>-->
+    <!--end-->
+</div>

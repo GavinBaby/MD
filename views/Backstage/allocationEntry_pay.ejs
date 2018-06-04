@@ -1,0 +1,505 @@
+<div id="watermeter_page">
+    <input type="hidden" id="seq_no_edit">
+    <input type="hidden" id="name_edit">
+    <!--start-->
+    <div style="float: left;width: 98%;margin: 20px 0px 0px 20px ">
+        <div style="width: 100%;height: 54px;background: #f3f3f3;border: 1px solid #e4e4e4;line-height: 74px">
+            <div style="width: 90%;float: left">
+
+                <style>
+                    .div_row{
+                        line-height: 50px;height: 50px;
+                    }
+                    .div_row label{
+                        float: left;
+                        display: inline-block;
+                        text-align: right;
+                        margin-right: 5px;
+                    }
+                    .div_wrapper{
+                        overflow: hidden;
+                        margin-bottom: 8px;
+                    }
+                    .div_wrapper input,.div_wrapper select{
+                        box-sizing: border-box;
+                        border: 1px solid #dfdfdf;
+                        width: 100%;
+                        height: 30px;
+                        outline: medium;
+                    }
+                </style>
+
+
+                <div class="div_row" style="width: 20%;float: left;">
+                    <label style="font-size: 14px;color: #666666;padding-left: 14px">出库单号</label>
+                    <div class="div_wrapper">
+                        <input name="name_q" id="name_q">
+                    </div>
+                </div>
+                <div class="div_row" style="width: 20%;float: left ;">
+                    <label style="font-size: 14px;color: #666666;padding-left: 14px">客户</label>
+                    <div class="div_wrapper" >
+                        <select id="status_q" name="status_q">
+                            <option value="">请选择</option>
+                            <option value="1">客户一</option>
+                            <option value="2">客户二</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="div_row" style="width: 20%;float: left;">
+                    <label style="font-size: 14px;color: #666666;padding-left: 14px">开始日期</label>
+                    <div class="div_wrapper">
+                        <input name="name_q" id="name_q">
+                    </div>
+                </div>
+                <div class="div_row" style="width: 20%;float: left;">
+                    <label style="font-size: 14px;color: #666666;padding-left: 14px">结束日期</label>
+                    <div class="div_wrapper">
+                        <input name="name_q" id="name_q">
+                    </div>
+                </div>
+            </div>
+
+            <div style="width: 10%;float: left;margin-top: 0px">
+                <div id="employeeSeatchBut" style="cursor:pointer;float: right;width: 77px;height: 30px;background: url(../images/sousuo.png);margin: 12px 18px 0px 0px;font-size: 15px;color: white;line-height: 30px;text-align: center">搜索</div></div>
+        </div>
+        <div style="width: 28%;float:left;min-height: 500px;border: 1px solid #e4e4e4;margin-top: 12px;padding: 10px 0px 0px 0px">
+            <div class="form-group">
+                <label class="control-label" style="font-size: 29px;width: 165px;margin: 0px 0px 0 28px;">收款记录</label>
+            </div>
+
+            <div class="form-group">
+                <label class=" control-label w-8" style="float: left;margin-left: 10px;height: 34px;line-height: 34px;">缴款日期：</label>
+                <div style="width: 50%;float: left;">
+                    <input style="border-left-width:0px;border-top-width:0px;border-right-width:0px;border-bottom-color:black" id="product_name" class="form-control" type="text" name="home_title1" maxlength="12" value="2017-10-15" >
+                </div>
+            </div>
+            <div style="clear: both;"></div>
+            <div class="form-group" >
+                <label class=" control-label w-8" style="float: left;margin-left: 10px;height: 34px;line-height: 34px;">缴款单号：</label>
+                <div style="width: 50%;float: left;">
+                    <input style="border-left-width:0px;border-top-width:0px;border-right-width:0px;border-bottom-color:black" id="product_name" class="form-control" type="text" name="home_title1" maxlength="12" value="" >
+                </div>
+            </div>
+            <div style="clear: both;"></div>
+            <div class="form-group" style="width: 100%">
+                <label class=" control-label w-8" style="float: left;margin-left: 10px;height: 34px;line-height: 34px;">缴款金额：</label>
+                <div style="width: 50%;float: left;">
+                    <input style="border-left-width:0px;border-top-width:0px;border-right-width:0px;border-bottom-color:black" id="product_name" class="form-control" type="text" name="home_title1" maxlength="12" value="" >
+                </div>
+            </div>
+            <div style="clear: both;"></div>
+            <div class="form-group" style="width: 100%">
+                <label class=" control-label w-8" style="float: left;margin-left: 10px;height: 34px;line-height: 34px;">缴款人：</label>
+                <div style="width: 50%;float: left;">
+                    <input style="border-left-width:0px;border-top-width:0px;border-right-width:0px;border-bottom-color:black" id="product_name" class="form-control" type="text" name="home_title1" maxlength="12" value="" >
+                </div>
+            </div>
+            <div style="clear: both;"></div>
+            <div class="form-group" style="width: 100%">
+                <label class=" control-label w-8" style="float: left;margin-left: 10px;height: 34px;line-height: 34px;">备注：</label>
+                <div style="width: 50%;float: left;">
+                    <input style="border-left-width:0px;border-top-width:0px;border-right-width:0px;border-bottom-color:black" id="product_name" class="form-control" type="text" name="home_title1" maxlength="12" value="" >
+                </div>
+            </div>
+
+            <div style="clear: both;"></div>
+            <div class="form-group" style="width: 100%">
+                <label class=" control-label w-8" style="float: left;margin-left: 10px;height: 34px;line-height: 34px;"><span style="background-color:mediumseagreen;padding-left: 5px;">收款方式：</span></label>
+                <div style="width: 50%;float: left;">
+                    <input style="border-left-width:0px;border-top-width:0px;border-right-width:0px;border-bottom-color:black" id="product_name" class="form-control" type="text" name="home_title1" maxlength="12" value="" >
+                </div>
+            </div>
+
+            <div style="clear: both;"></div>
+            <div class="form-group" style="width: 100%">
+                <label class=" control-label w-8" style="float: left;margin-left: 10px;height: 34px;line-height: 34px;"><span style="background-color:mediumseagreen;padding-left: 5px;">收款标志：</span></label>
+                <div style="width: 50%;float: left;">
+                    <input style="border-left-width:0px;border-top-width:0px;border-right-width:0px;border-bottom-color:black" id="product_name" class="form-control" type="text" name="home_title1" maxlength="12" value="" >
+                </div>
+            </div>
+
+            <div style="clear: both;"></div>
+            <div class="form-group" style="width: 100%">
+                <label class=" control-label w-9" style="float: left;margin-left: 10px;height: 34px;line-height: 34px;"><span style="background-color:mediumseagreen;padding-left: 5px;">客户编码</span></label>
+                <div style="width: 50%;float: left;">
+                    <input style="border-left-width:0px;border-top-width:0px;border-right-width:0px;border-bottom-color:black" id="product_name" class="form-control" type="text" name="home_title1" maxlength="12" value="" >
+                </div>
+            </div>
+            <div style="clear: both;"></div>
+            <div class="form-group" style="width: 100%">
+                <label class=" control-label w-8" style="width: 100%;text-align: center">XX小商品超市</label>
+            </div>
+
+            <div style="clear: both;"></div>
+            <div class="form-group" style="width: 100%">
+                <label class=" control-label w-8" style="float: left;margin-left: 10px;height: 34px;line-height: 34px;"><span style="background-color:mediumseagreen;padding-left: 5px;">销账人：</span></label>
+                <div style="width: 50%;float: left;">
+                    <input style="border-left-width:0px;border-top-width:0px;border-right-width:0px;border-bottom-color:black" id="product_name" class="form-control" type="text" name="home_title1" maxlength="12" value="" >
+                </div>
+            </div>
+
+            <div style="clear: both;"></div>
+            <div class="form-group" style="width: 100%">
+                <label class=" control-label w-8" style="float: left;margin-left: 10px;height: 34px;line-height: 34px;"><span style="background-color:mediumseagreen;padding-left: 5px;">销账日期：</span></label>
+                <div style="width: 50%;float: left;">
+                    <input style="border-left-width:0px;border-top-width:0px;border-right-width:0px;border-bottom-color:black" id="product_name" class="form-control" type="text" name="home_title1" maxlength="12" value="" >
+                </div>
+            </div>
+
+            <div style="clear: both;"></div>
+            <div class="form-group" style="width: 100%">
+                <label class=" control-label w-8" style="float: left;margin-left: 10px;height: 34px;line-height: 34px;"><span style="background-color:mediumseagreen;padding-left: 5px;">记录单号：</span></label>
+                <div style="width: 50%;float: left;">
+                    <input style="border-left-width:0px;border-top-width:0px;border-right-width:0px;border-bottom-color:black" id="product_name" class="form-control" type="text" name="home_title1" maxlength="12" value="" >
+                </div>
+            </div>
+            <div style="clear: both;"></div>
+            <div class="form-group" style="width: 100%">
+                <label class=" control-label w-8" style="float: left;margin-left: 10px;height: 34px;line-height: 34px;"><span style="background-color:mediumseagreen;padding-left: 5px;">预付款：</span></label>
+                <div style="width: 50%;float: left;">
+                    <input style="border-left-width:0px;border-top-width:0px;border-right-width:0px;border-bottom-color:black" id="product_name" class="form-control" type="text" name="home_title1" maxlength="12" value="" >
+                </div>
+            </div>
+
+            <div style="clear: both;"></div>
+            <div class="modal-footer pb-2" style="text-align: center;">
+                <button type="button" class="btn btn-default btn-default-green w-10 font-14 float-none" data-dismiss="modal" id="add_account_cancel">撤销</button>
+                <button id="save_product" type="button" class="btn btn-success w-10 font-14 float-none ml-2" >保存</button>
+            </div>
+        </div>
+
+
+        <div style="width: 70%;min-height: 500px;border: 1px solid #e4e4e4;margin-top: 12px;padding: 10px 0px 0px 10px;float: right;">
+
+            <div style="min-height: 240px;">
+                <table class="table-style-1 table-style-1-a table-hover mb-0-5" id="area_Table">
+                    <thead>
+                    <tr class="sch" style="font-size: 12px;">
+                        <td style="width: 5%;" align="center">
+                            <div class="t text-left" >选择
+                                <span class="sort-ico" style="padding-top:10px;"><i class="dot-top icon-caret-up"></i><i class="dot-bottom icon-caret-down"></i></span>
+                            </div>
+                        </td>
+                        <td style="width: 10%;" align="center">
+                            <div class="t text-left" >出库单号
+                                <span class="sort-ico" style="padding-top:10px;"><i class="dot-top icon-caret-up"></i><i class="dot-bottom icon-caret-down"></i></span>
+                            </div>
+                        </td>
+
+                        <td style="width: 10%;" align="center">
+                            <div class="t text-left" >出库单金额
+                                <span class="sort-ico" style="padding-top:10px;"><i class="dot-top icon-caret-up"></i><i class="dot-bottom icon-caret-down"></i></span>
+                            </div>
+                        </td>
+                        <td style="width: 10%;" align="center">
+                            <div class="t">已收金额<span class="sort-ico" style="padding-top:10px;"><i class="dot-top icon-caret-up"></i><i class="dot-bottom icon-caret-down"></i></span></div>
+                        </td>
+                        <td style="width: 10%;" align="center">
+                            <div class="t">余额<span class="sort-ico" style="padding-top:10px;"><i class="dot-top icon-caret-up"></i><i class="dot-bottom icon-caret-down"></i></span></div>
+                        </td>
+                        <td style="width: 10%;" align="center">
+                            <div class="t text-left" >客户
+                                <span class="sort-ico" style="padding-top:10px;"><i class="dot-top icon-caret-up"></i><i class="dot-bottom icon-caret-down"></i></span>
+                            </div>
+                        </td>
+                        <td style="width: 10%;" align="center">
+                            <div class="t text-left" >累计收款金额
+                                <span class="sort-ico" style="padding-top:10px;"><i class="dot-top icon-caret-up"></i><i class="dot-bottom icon-caret-down"></i></span>
+                            </div>
+                        </td>
+                        <td style="width: 10%;" align="center">
+                            <div class="t">收款日期<span class="sort-ico" style="padding-top:10px;"><i class="dot-top icon-caret-up"></i><i class="dot-bottom icon-caret-down"></i></span></div>
+                        </td>
+                        <td style="width: 10%;" align="center">
+                            <div class="t text-left" >业务员
+                                <span class="sort-ico" style="padding-top:10px;"><i class="dot-top icon-caret-up"></i><i class="dot-bottom icon-caret-down"></i></span>
+                            </div>
+                        </td>
+                        <td style="width: 10%;" align="center">
+                            <div class="t">操作</div>
+                        </td>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr role="row" class="odd">
+                        <td><div style="text-align: center;"><input type="checkbox"></div></td>
+                        <td><div style="text-align: center;">00001</div></td>
+                        <td><div style="text-align: center;">8888888</div></td>
+                        <td><div style="text-align: center;"></div></td>
+                        <td><div style="text-align: center;">8888888</div></td>
+                        <td><div style="text-align: center;">XX超市</div></td>
+                        <td><div style="text-align: center;">8888888</div></td>
+                        <td><div style="text-align: center;">2017-10-15</div></td>
+                        <td><div style="text-align: center;">CD</div></td>
+                        <td><div style="text-align: center;"><a class="addInovoice" href="javascript:void(0)" data-no="10000000001" data-id="0" data-phone="13484218482" data-toggle="modal">查看</a></div></td>
+                    </tr>
+                    <tr role="row" class="odd">
+                        <td><div style="text-align: center;"><input type="checkbox"></div></td>
+                        <td><div style="text-align: center;">00001</div></td>
+                        <td><div style="text-align: center;">8888888</div></td>
+                        <td><div style="text-align: center;"></div></td>
+                        <td><div style="text-align: center;">8888888</div></td>
+                        <td><div style="text-align: center;">XX超市</div></td>
+                        <td><div style="text-align: center;">8888888</div></td>
+                        <td><div style="text-align: center;">2017-10-15</div></td>
+                        <td><div style="text-align: center;">CD</div></td>
+                        <td><div style="text-align: center;"><a class="addInovoice" href="javascript:void(0)" data-no="10000000001" data-id="0" data-phone="13484218482" data-toggle="modal">查看</a></div></td>
+                    </tr>
+                    <tr role="row" class="odd">
+                        <td><div style="text-align: center;"><input type="checkbox"></div></td>
+                        <td><div style="text-align: center;">00001</div></td>
+                        <td><div style="text-align: center;">8888888</div></td>
+                        <td><div style="text-align: center;"></div></td>
+                        <td><div style="text-align: center;">8888888</div></td>
+                        <td><div style="text-align: center;">XX超市</div></td>
+                        <td><div style="text-align: center;">8888888</div></td>
+                        <td><div style="text-align: center;">2017-10-15</div></td>
+                        <td><div style="text-align: center;">CD</div></td>
+                        <td><div style="text-align: center;"><a class="addInovoice" href="javascript:void(0)" data-no="10000000001" data-id="0" data-phone="13484218482" data-toggle="modal">查看</a></div></td>
+                    </tr>
+                    <tr role="row" class="odd" style="background-color: greenyellow">
+                        <td><div style="text-align: center;"></div></td>
+                        <td><div style="text-align: center;">总计</div></td>
+                        <td><div style="text-align: center;">8888888</div></td>
+                        <td><div style="text-align: center;"></div></td>
+                        <td><div style="text-align: center;">0.00</div></td>
+                        <td><div style="text-align: center;">8888888</div></td>
+                        <td><div style="text-align: center;"></div></td>
+                        <td><div style="text-align: center;">8888888</div></td>
+                        <td><div style="text-align: center;">共3行</div></td>
+                        <td><div style="text-align: center;"></div></td>
+                    </tr>
+
+                    </tbody>
+                </table>
+            </div>
+
+
+        </div>
+
+    </div>
+
+
+
+    <!-- 添加集中器弹窗 -->
+    <div class="modal modal-noline fade" id="addAreaModal" tabindex="-1" role="dialog" aria-labelledby="addAccountModalLabel" aria-hidden="true">
+        <div class="modal-outer">
+            <div class="modal-middle">
+                <div class="modal-dialog modal-inner float-none" style="width:650px;">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal"></button>
+                        </div>
+                        <div class="modal-body p-1">
+                            <table class="table-style-1 table-style-1-a table-hover mb-0-5" id="area_Table">
+                                <thead>
+                                <tr class="sch">
+                                    <td style="width: 14%;" align="center">
+                                        <div class="t text-left" >记录编号
+                                            <span class="sort-ico" style="padding-top:10px;"><i class="dot-top icon-caret-up"></i><i class="dot-bottom icon-caret-down"></i></span>
+                                        </div>
+                                    </td>
+                                    <td style="width: 14%;" align="center">
+                                        <div class="t">应付款金额<span class="sort-ico" style="padding-top:10px;"><i class="dot-top icon-caret-up"></i><i class="dot-bottom icon-caret-down"></i></span></div>
+                                    </td>
+                                    <td style="width: 14%;" align="center">
+                                        <div class="t">标志<span class="sort-ico" style="padding-top:10px;"><i class="dot-top icon-caret-up"></i><i class="dot-bottom icon-caret-down"></i></span></div>
+                                    </td>
+
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr role="row" class="odd">
+                                    <td><div style="text-align: center;">2017100001</div></td>
+                                    <td><div style="text-align: center;">8888888</div></td>
+                                    <td><div class="addInovoice" style="text-align: center;cursor:pointer;">　</div></td>
+                                </tr>
+                                <tr role="row" class="odd">
+                                    <td><div style="text-align: center;">2017100001</div></td>
+                                    <td><div style="text-align: center;">8888888</div></td>
+                                    <td><div class="addInovoice" style="text-align: center;cursor:pointer;">部分</div></td>
+                                </tr>
+                                <tr role="row" class="odd">
+                                    <td><div style="text-align: center;">2017100001</div></td>
+                                    <td><div style="text-align: center;">8888888</div></td>
+                                    <td><div class="addInovoice" style="text-align: center;cursor:pointer;">　</div></td>
+                                </tr>
+
+
+                                </tbody>
+                            </table>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 添加集中器弹窗 -->
+    <div class="modal modal-noline fade" id="addAreaModal1" tabindex="-1" role="dialog" aria-labelledby="addAccountModalLabel" aria-hidden="true">
+        <div class="modal-outer">
+            <div class="modal-middle">
+                <div class="modal-dialog modal-inner float-none" style="width:1080px;">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal"></button>
+                        </div>
+                        <div class="modal-body p-1 ">
+
+                            <div class="form-group" >
+                                <style>
+                                    .table-style-2>tbody>tr>td {
+                                        border: 1px solid #e6e6e6;
+                                        border-right: none;
+                                    }
+                                </style>
+                                <table class="table-style-2 table-style-1 table-style-1-a table-hover mb-0-5" id="area_Table">
+                                    <thead>
+                                    <tr class="sch" style="font-size: 12px;">
+                                        <td style="width: 7%;" align="center">
+                                            <div class="t text-left" >商品编号
+                                                <span class="sort-ico" style="padding-top:10px;"><i class="dot-top icon-caret-up"></i><i class="dot-bottom icon-caret-down"></i></span>
+                                            </div>
+                                        </td>
+                                        <td style="width: 7%;" align="center">
+                                            <div class="t">商品名称<span class="sort-ico" style="padding-top:10px;"><i class="dot-top icon-caret-up"></i><i class="dot-bottom icon-caret-down"></i></span></div>
+                                        </td>
+                                        <td style="width: 7%;" align="center">
+                                            <div class="t">规格<span class="sort-ico" style="padding-top:10px;"><i class="dot-top icon-caret-up"></i><i class="dot-bottom icon-caret-down"></i></span></div>
+                                        </td>
+                                        <td style="width: 7%;" align="center">
+                                            <div class="t">数量<span class="sort-ico" style="padding-top:10px;"><i class="dot-top icon-caret-up"></i><i class="dot-bottom icon-caret-down"></i></span></div>
+                                        </td>
+                                        <td style="width: 7%;" align="center">
+                                            <div class="t">单价<span class="sort-ico" style="padding-top:10px;"><i class="dot-top icon-caret-up"></i><i class="dot-bottom icon-caret-down"></i></span></div>
+                                        </td>
+                                        <td style="width: 7%;" align="center">
+                                            <div class="t">金额<span class="sort-ico" style="padding-top:10px;"><i class="dot-top icon-caret-up"></i><i class="dot-bottom icon-caret-down"></i></span></div>
+                                        </td>
+                                        <td style="width: 7%;" align="center">
+                                            <div class="t">已开票数量<span class="sort-ico" style="padding-top:10px;"><i class="dot-top icon-caret-up"></i><i class="dot-bottom icon-caret-down"></i></span></div>
+                                        </td>
+                                        <td style="width: 7%;" align="center">
+                                            <div class="t">已开票金额<span class="sort-ico" style="padding-top:10px;"><i class="dot-top icon-caret-up"></i><i class="dot-bottom icon-caret-down"></i></span></div>
+                                        </td>
+                                        <td style="width: 7%;" align="center">
+                                            <div class="t">本次开票数量<span class="sort-ico" style="padding-top:10px;"><i class="dot-top icon-caret-up"></i><i class="dot-bottom icon-caret-down"></i></span></div>
+                                        </td>
+                                        <td style="width: 7%;" align="center">
+                                            <div class="t">本次开票金额<span class="sort-ico" style="padding-top:10px;"><i class="dot-top icon-caret-up"></i><i class="dot-bottom icon-caret-down"></i></span></div>
+                                        </td>
+                                        <td style="width: 7%;" align="center">
+                                            <div class="t">本次开票数量<span class="sort-ico" style="padding-top:10px;"><i class="dot-top icon-caret-up"></i><i class="dot-bottom icon-caret-down"></i></span></div>
+                                        </td>
+                                        <td style="width: 7%;" align="center">
+                                            <div class="t">结余数量<span class="sort-ico" style="padding-top:10px;"><i class="dot-top icon-caret-up"></i><i class="dot-bottom icon-caret-down"></i></span></div>
+                                        </td>
+                                        <td style="width: 7%;" align="center">
+                                            <div class="t">结余金额<span class="sort-ico" style="padding-top:10px;"><i class="dot-top icon-caret-up"></i><i class="dot-bottom icon-caret-down"></i></span></div>
+                                        </td>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr role="row" class="odd" style="font-size: 12px;">
+                                        <td><div style="text-align: center;">10001</div></td>
+                                        <td><div style="text-align: center;">80422</div></td>
+                                        <td><div style="text-align: center;">怡宝矿泉水</div></td>
+                                        <td><div style="text-align: center;">24</div></td>
+                                        <td><div style="text-align: center;">100.00</div></td>
+                                        <td><div style="text-align: center;">23.00</div></td>
+                                        <td><div style="text-align: center;">2300.00</div></td>
+                                        <td style="background-color: lightgreen"><div style="text-align:center"></div></td>
+                                        <td style="background-color: lightgreen"><div style="text-align: center;"></div></td>
+                                        <td><div style="text-align: center;"></div></td>
+                                        <td><div style="text-align: center;"></div></td>
+                                        <td><div style="text-align: center;color: red">100</div></td>
+                                        <td><div style="text-align: center;color: red">2300</div></td>
+
+                                    </tr>
+                                    <tr role="row" class="odd" style="font-size: 12px;">
+                                        <td><div style="text-align: center;">10001</div></td>
+                                        <td><div style="text-align: center;">80422</div></td>
+                                        <td><div style="text-align: center;">怡宝矿泉水</div></td>
+                                        <td><div style="text-align: center;">24</div></td>
+                                        <td><div style="text-align: center;">100.00</div></td>
+                                        <td><div style="text-align: center;">23.00</div></td>
+                                        <td><div style="text-align: center;">2300.00</div></td>
+                                        <td style="background-color: lightgreen"><div style="text-align:center"></div></td>
+                                        <td style="background-color: lightgreen"><div style="text-align: center;"></div></td>
+                                        <td><div style="text-align: center;"></div></td>
+                                        <td><div style="text-align: center;"></div></td>
+                                        <td><div style="text-align: center;color: red">100</div></td>
+                                        <td><div style="text-align: center;color: red">2300</div></td>
+
+                                    </tr>
+                                    <tr role="row" class="odd" style="font-size: 12px;">
+                                        <td><div style="text-align: center;">10001</div></td>
+                                        <td><div style="text-align: center;">80422</div></td>
+                                        <td><div style="text-align: center;">怡宝矿泉水</div></td>
+                                        <td><div style="text-align: center;">24</div></td>
+                                        <td><div style="text-align: center;">100.00</div></td>
+                                        <td><div style="text-align: center;">23.00</div></td>
+                                        <td><div style="text-align: center;">2300.00</div></td>
+                                        <td style="background-color: lightgreen"><div style="text-align:center"></div></td>
+                                        <td style="background-color: lightgreen"><div style="text-align: center;"></div></td>
+                                        <td><div style="text-align: center;"></div></td>
+                                        <td><div style="text-align: center;"></div></td>
+                                        <td><div style="text-align: center;color: red">100</div></td>
+                                        <td><div style="text-align: center;color: red">2300</div></td>
+
+                                    </tr>
+                                    <tr role="row" class="odd" style="font-size: 12px;background-color: greenyellow">
+                                        <td><div style="text-align: center;"></div></td>
+                                        <td><div style="text-align: center;">总计</div></td>
+                                        <td><div style="text-align: center;">共3行</div></td>
+                                        <td><div style="text-align: center;"></div></td>
+                                        <td><div style="text-align: center;">300.00</div></td>
+                                        <td><div style="text-align: center;"></div></td>
+                                        <td><div style="text-align: center;">6900.00</div></td>
+                                        <td style="background-color: lightgreen"><div style="text-align:center">0</div></td>
+                                        <td style="background-color: lightgreen"><div style="text-align: center;">0</div></td>
+                                        <td><div style="text-align: center;">0</div></td>
+                                        <td><div style="text-align: center;">0</div></td>
+                                        <td><div style="text-align: center;color: red">100</div></td>
+                                        <td><div style="text-align: center;color: red">2300</div></td>
+
+                                    </tr>
+
+                                    </tbody>
+                                </table>
+
+                            </div>
+
+                            <form class="form-horizontal" action="" method="post"   id="add_form">
+                                <!--<div class="modal-footer text-center pb-2">
+                                    <button type="button" class="btn btn-default btn-default-green w-14 font-16 float-none" data-dismiss="modal" id="add_account_cancel">取消</button>
+                                    <button id="save_area" type="button" class="btn btn-success w-14 font-16 float-none ml-2">保存</button>
+                                </div>-->
+
+                            </form>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+<!--私有js-->
+<script>
+
+    $(".addInovoice").on("click",function(){
+        /*$("#addAreaModal1").modal('show');*/
+        $.learuntab.addTab(411,"/godownEntry_add","入库单·详情");
+    })
+
+    $(".employee_edit").on("click",function(){
+        $("#addAreaModal").modal('show');
+    })
+</script>
+<!--<script src="/js/table-ajax.js"></script>-->
+<!--<script src="/js/Backstage/watermeter.js"></script>-->
+<!--end-->

@@ -1,0 +1,65 @@
+<div id="product_add_page">
+    <ol class="breadcrumb">
+        <div style="text-align: center;font-size: 16px;font-weight:bold;">销售日报</div>
+    </ol>
+    <div class="main-box main-box-noborder overflow-hidden" style="padding-top: 12px;padding-left: 20px;">
+        <form class="form-horizontal"  method='post'  action='/upload/file/uploading' enctype="multipart/form-data"   id="sales_add_form"  >
+            <div class="form-group">
+                <label class="w-13 control-label" style="font-family: 微软雅黑;font-size: 16px">日报日期：</label>
+                <div class="w-12 relative ml-1">
+                    <input style="border-left-width:0px;border-top-width:0px;border-right-width:0px;border-bottom-color:black" id="" class="form-control" type="text" name="daily_data" maxlength="12" value="2017-11-01">
+                </div>
+                <label class="w-13 control-label" style="font-family: 微软雅黑;font-size: 16px">汇报人：</label>
+                <div class="w-12 relative ml-1">
+                    <input style="border-left-width:0px;border-top-width:0px;border-right-width:0px;border-bottom-color:black" id="" class="form-control" type="text" name="daily_man" maxlength="12" value="CD">
+                </div>
+                <label class="w-13 control-label" style="font-family: 微软雅黑;font-size: 16px">所属部门：</label>
+                <div class="w-12 relative ml-1">
+                    <input style="border-left-width:0px;border-top-width:0px;border-right-width:0px;border-bottom-color:black" id="" class="form-control" type="text" name="department" maxlength="12" value="销售部">
+                </div>
+                <label class="w-13 control-label" style="font-family: 微软雅黑;font-size: 16px">审阅状态：</label>
+                <div class="w-12 relative ml-1">
+                    <input style="border-left-width:0px;border-top-width:0px;border-right-width:0px;border-bottom-color:black" id="" class="form-control" type="text" name="state" maxlength="12" value="待阅">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="w-13 control-label" style="font-family: 微软雅黑;font-size: 16px">汇报内容：</label>
+                <div class="w-100 relative ml-4 ">
+                    <textarea class="form-control" rows="3" id="product_content" name="body" maxlength="1024" placeholder="" style="height: 120px"></textarea>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="w-13 control-label" style="font-family: 微软雅黑;font-size: 16px">相关附件：</label>
+                <div class="msg text-gray-lighter font-12 mt-0-5">(请上传产品驱动)</div>
+                <div class="roompic-upload w-12" style="margin-top: 5px;">
+                    <input id="add_top_img1" name='inputFile' multiple="multiple"  class="form-btn-upload" type="file" > </input>
+                    <div id="unknow" style="width:24px;height:18px;position: fixed;z-index: 999;margin: -44px 0 0 -56px;font-size:12px;overflow:hidden;color: white" hidden></div>
+                </div>
+            </div>
+            <div class="modal-footer pb-2" style="text-align: center;">
+                <button type="button" class="btn btn-default btn-default-green w-14 font-16 float-none" data-dismiss="modal" id="add_account_cancel">取消</button>
+                <button id="save_sales" type="button" class="btn btn-success w-14 font-16 float-none ml-2" >保存</button>
+            </div>
+        </form>
+        <nav class="pagination-wrap clearfix" style="height: 20px;margin-top:-22px">
+        </nav>
+    </div>
+    <script>
+        function CloseWebPage(){
+            $(".nav-main ul .close-page").trigger("click");
+        }
+        $('.close').on('click',function(){
+            $("#addClassModal").modal('hide');
+            $("#addDataModal").modal('hide');
+            $("#addQuestionsModal").modal('hide');
+        })
+        $('#save_product').on('click',function(){
+            $('#case_add_form').ajaxSubmit();
+            alert('保存成功');
+        })
+    </script>
+    <!--私有js-->
+    <script src="js/jquery-form.js"></script>
+    <script src="/js/backstage/salesDaily_add.js"></script>
+    <!--end-->
+</div>

@@ -1,0 +1,29 @@
+@charset "utf-8";
+/* CSS Document */
+/***
+*  验证css扩展
+***/
+.lp_lf{
+	position: absolute;
+	right:0;
+	bottom: 115%;
+	padding: 6px 16px;
+	font-size: 12px;
+	background-color: #FFE7D5;
+	color: #333;
+	box-shadow: 0 1px 3px #999;
+	border-radius: 2px;
+	font-size:14px;
+	font-family: 微软雅黑;
+}
+.lp_lf .n-arrow-01{
+	position: absolute;
+	bottom: -15px;
+	left: 75%;
+	text-shadow: 0px 2px 0px #ccc;
+}
+.lp_lf .n-arrow-01 b{
+	color: #FFE7D5;
+	font-size: 24px;
+}
+

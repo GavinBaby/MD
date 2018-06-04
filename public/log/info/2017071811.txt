@@ -1,0 +1,10 @@
+[2017-07-18 11:18:01.154] [INFO] logInfo - ::ffff:127.0.0.1 -  GET /sold_detail 304 
+[2017-07-18 11:18:01.168] [INFO] logInfo - ::ffff:127.0.0.1 -  GET /js/table-ajax.js?_=1500289192001 200 
+[2017-07-18 11:18:22.753] [INFO] logInfo - ::ffff:127.0.0.1 -  GET /regional_payment 304 
+[2017-07-18 11:18:22.766] [INFO] logInfo - ::ffff:127.0.0.1 -  GET /js/table-ajax.js?_=1500289192002 200 
+[2017-07-18 11:18:22.772] [INFO] logInfo - ::ffff:127.0.0.1 -  GET /js/backstage/regional_water.js?_=1500289192003 200 
+[2017-07-18 11:18:22.787] [INFO] logInfo - ::ffff:127.0.0.1 -  GET /js/Backstage/regional_payment.js?_=1500289192004 200 
+[2017-07-18 11:42:50.481] [INFO] logInfo - ::ffff:127.0.0.1 -  GET /sold_amount 304 
+[2017-07-18 11:42:50.491] [INFO] logInfo - ::ffff:127.0.0.1 -  GET /js/table-ajax.js?_=1500289192005 200 
+[2017-07-18 11:43:19.611] [INFO] logInfo - ::ffff:127.0.0.1 -  GET /sold_detail 304 
+[2017-07-18 11:43:19.618] [INFO] logInfo - ::ffff:127.0.0.1 -  GET /js/table-ajax.js?_=1500289192006 200 

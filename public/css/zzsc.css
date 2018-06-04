@@ -1,0 +1,23 @@
+.tv_hot {
+    width: 248px;
+    border: 1px solid #eeeeee;
+}
+
+.avatar {
+    position: relative;
+}
+.tv_hot .avatar {
+    display: block;
+    height: 186px;
+    overflow: hidden;
+    width: 248px;
+}
+.tv_hot .avatar img {
+    height: 186px;
+}
+.avatar:hover img, .zhuti .avatar:hover img, .bbsinner .avatar:hover img {
+    transform: scale(1.2);
+    transition: all 0.2s ease 0s;
+	-webkit-transform: scale(1.2);
+	-webkit-transform: all 0.2s ease 0s;
+}

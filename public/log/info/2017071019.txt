@@ -1,0 +1,8 @@
+[2017-07-10 19:03:53.534] [INFO] logInfo - ::ffff:127.0.0.1 -  GET /sold_detail 304 
+[2017-07-10 19:03:53.546] [INFO] logInfo - ::ffff:127.0.0.1 -  GET /js/table-ajax.js?_=1499681949475 200 
+[2017-07-10 19:03:57.196] [INFO] logInfo - ::ffff:127.0.0.1 -  GET /sold_amount 304 
+[2017-07-10 19:03:57.205] [INFO] logInfo - ::ffff:127.0.0.1 -  GET /js/table-ajax.js?_=1499681949476 200 
+[2017-07-10 19:04:15.203] [INFO] logInfo - ::ffff:127.0.0.1 -  GET /sold_detail 304 
+[2017-07-10 19:04:15.214] [INFO] logInfo - ::ffff:127.0.0.1 -  GET /js/table-ajax.js?_=1499681949477 200 
+[2017-07-10 19:04:18.072] [INFO] logInfo - ::ffff:127.0.0.1 -  GET /timing_task 304 
+[2017-07-10 19:28:30.875] [INFO] logInfo - ::ffff:127.0.0.1 -  GET /watermeter?seq_no=66666666&name=%E9%87%87%E9%9B%86%E5%99%A8B 304 

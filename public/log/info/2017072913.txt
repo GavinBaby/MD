@@ -1,0 +1,3 @@
+[2017-07-29 13:22:57.815] [INFO] logInfo - ::ffff:127.0.0.1 -  GET /console 304 
+[2017-07-29 13:22:57.826] [INFO] logInfo - ::ffff:127.0.0.1 -  GET /js/table-ajax.js?_=1501301135035 200 
+[2017-07-29 13:22:57.832] [INFO] logInfo - ::ffff:127.0.0.1 -  GET /js/Backstage/control_manage.js?_=1501301135036 200 

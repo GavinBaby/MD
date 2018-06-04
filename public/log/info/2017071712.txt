@@ -1,0 +1,7 @@
+[2017-07-17 12:00:06.943] [INFO] logInfo - ::ffff:127.0.0.1 -  GET /water_property 200 
+[2017-07-17 12:00:13.139] [INFO] logInfo - ::ffff:127.0.0.1 -  GET /water_property 200 
+[2017-07-17 12:00:53.010] [INFO] logInfo - ::ffff:127.0.0.1 -  GET /sys_setting 304 
+[2017-07-17 12:00:53.713] [INFO] logInfo - ::ffff:127.0.0.1 -  GET /water_property 304 
+[2017-07-17 12:00:54.360] [INFO] logInfo - ::ffff:127.0.0.1 -  GET /sys_setting 304 
+[2017-07-17 12:00:55.839] [INFO] logInfo - ::ffff:127.0.0.1 -  GET /water_property 304 
+[2017-07-17 12:31:11.054] [INFO] logInfo - ::ffff:127.0.0.1 -  GET /sys_setting 304 

@@ -1,0 +1,96 @@
+.input-icon > i {
+    right: 8px;
+    float: right;
+    display: block;
+    position: absolute;
+    margin: 11px 2px 4px 10px;
+    z-index: 3;
+    width: 16px;
+    font-size: 16px;
+    text-align: center;
+}
+
+.select-icon > i {
+    right: 18px;
+    float: right;
+    display: block;
+    position: absolute;
+    margin: 11px 2px 4px 10px;
+    z-index: 3;
+    width: 16px;
+    font-size: 16px;
+    text-align: center;
+}
+
+.input-icon {
+    position: relative;
+}
+
+.select-icon {
+    position: relative;
+}
+
+.fa {
+    font: normal normal normal 16px/1 FontAwesome;
+    transform: translate(0, 0);
+}
+
+.fa-warning:before {
+    color: #F3565D;
+    content: "\f071";
+}
+
+/*.fa-check:before {
+    color: #45B6AF;
+    content: "\f00c";
+}*/
+
+.alert {
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+}
+
+.alert-danger {
+    background-color: #f2dede;
+    border-color: #ebccd1;
+    color: #a94442;
+}
+
+.alert-success {
+    background-color: #dff0d8;
+    border-color: #d6e9c6;
+    color: #3c763d;
+}
+
+.display-none, .display-hide {
+    display: none;
+}
+
+.tooltip.top .tooltip-arrow {
+    bottom: 0;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px 5px 0;
+    border-top-color: #F3565D;
+
+}
+
+.tooltip-inner {
+    position: relative;
+    max-width: 200px;
+    padding: 3px 8px;
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    background-color: #E55A5A;
+    border-radius: 4px;
+}
+
+.has-success .form-control {
+    border: 1px solid #dcdcdc;
+    border-color: #dcdcdc;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+}

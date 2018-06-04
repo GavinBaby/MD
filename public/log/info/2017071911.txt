@@ -1,0 +1,3 @@
+[2017-07-19 11:25:26.563] [INFO] logInfo - ::ffff:127.0.0.1 -  GET /regional_water 304 
+[2017-07-19 11:25:26.576] [INFO] logInfo - ::ffff:127.0.0.1 -  GET /js/table-ajax.js?_=1500365348828 200 
+[2017-07-19 11:25:26.583] [INFO] logInfo - ::ffff:127.0.0.1 -  GET /js/backstage/regional_water.js?_=1500365348829 200 

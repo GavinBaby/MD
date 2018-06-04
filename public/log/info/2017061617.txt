@@ -1,0 +1,2 @@
+[2017-06-16 17:07:11.821] [INFO] logInfo - Cannot read property 'seq_no' of undefined
+[2017-06-16 17:07:11.841] [INFO] logInfo - ::ffff:127.0.0.1 -  GET /account/new 500 

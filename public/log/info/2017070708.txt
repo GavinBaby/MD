@@ -1,0 +1,7 @@
+[2017-07-07 08:58:00.269] [INFO] logInfo - ::ffff:127.0.0.1 -  GET /moneybuy 304 
+[2017-07-07 08:58:05.181] [INFO] logInfo - ::ffff:127.0.0.1 -  GET /water_sys 304 
+[2017-07-07 08:58:37.053] [INFO] logInfo - ::ffff:127.0.0.1 -  GET /moneybuy 304 
+[2017-07-07 08:58:37.075] [INFO] logInfo - ::ffff:127.0.0.1 -  GET /images/sousuo.png 304 
+[2017-07-07 08:59:27.210] [INFO] logInfo - ::ffff:127.0.0.1 -  GET /water_sys 304 
+[2017-07-07 08:59:43.399] [INFO] logInfo - ::ffff:127.0.0.1 -  GET /water_property 304 
+[2017-07-07 08:59:47.748] [INFO] logInfo - ::ffff:127.0.0.1 -  GET /water_sys 304 

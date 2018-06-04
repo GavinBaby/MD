@@ -1,0 +1,122 @@
+.tree {
+    user-select: none;
+    -webkit-user-select: none;
+  /*  border: 1px solid #ddd;*/
+
+}
+
+ul, li {
+    margin: 0;
+    padding: 0;
+}
+
+.tree * {
+    box-sizing: border-box;
+}
+
+
+
+
+.tree-node-wrap:hover {
+    background: #bedcf8;
+}
+
+.tree-node {
+    position: relative;
+    line-height: 2;
+}
+
+.tree-node-checkbox {
+    position: relative;
+    display: inline-block;
+    width: 17px;
+    height: 17px;
+    vertical-align: -3px;
+    cursor: pointer;
+    background: #fff;
+    z-index: 1;
+    border: 1px solid #3492E9;
+}
+
+.tree-node-checkbox.checked {
+    background: #3492E9 url("data:image/gif;base64,R0lGODlhDwAPAJEAAAAAAP///////wAAACH5BAEAAAIALAAAAAAPAA8AAAIXlI+py+2fQoCSznhNXXsz6TUhRJamUwAAOw==") no-repeat center center;
+}
+
+.tree-node-checkbox.half-checked:after {
+    position: absolute;
+    top: 4px;
+    right: 4px;
+    bottom: 4px;
+    left: 4px;
+    background: #09c;
+    content: '';
+}
+
+.tree-node-toggle {
+    position: absolute;
+    left: -10px;
+    top: -1px;
+    text-align: right;
+}
+
+.tree-node-toggle:before {
+    display: inline-block;
+    border-top: 4px solid transparent;
+    border-bottom: 4px solid transparent;
+    border-left: 6px solid #3492E9;
+    content: '';
+}
+
+.tree-nodes {
+    display: none;
+}
+
+.tree-node-toggle.expand:before {
+    transform: rotate(90deg);
+}
+
+.tree-checkbox input[type="checkbox"] {
+    display: none;
+}
+
+.tree-node-box {
+    position: relative;
+}
+
+.link .tree-node .line {
+    display: none;
+    position: absolute;
+    top: -15px;
+    margin-left: 0.5em;
+    height: 100%;
+    border-left: 1px dashed #3492E9;
+    content: '';
+}
+.link .tree-node.expand > .line {
+    display: block;
+}
+
+.link .tree-node.expand > .tree-node-wrap .after{
+    display: none;
+}
+
+.link .one-node > .tree-node.expand > .tree-node-wrap .after{
+    display: block;
+}
+
+.link .tree-node-box .before {
+    margin-left: 0.5em;
+    position: absolute;
+    top: 50%;
+    border-top: 1px dashed #3492E9;
+    content: '';
+}
+
+.link .tree-node-box .after {
+    margin-left: 0.5em;
+    position: absolute;
+    top: -50%;
+    height: 100%;
+    border-left: 1px dashed #3492E9;
+    content: '';
+}

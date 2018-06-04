@@ -1,0 +1,255 @@
+<link rel="stylesheet" href="js/src/jquery.tree.css">
+<script src="/js/src/jquery.tree.js"></script>
+<div id="roles_page">
+    <!--start-->
+    <div style="float: left;width: 98%;min-height: 700px;margin: 20px 0px 0px 20px ">
+        <div style="width: 100%;height: 74px;background: #f3f3f3;border: 1px solid #e4e4e4;line-height: 74px">
+            <div style="width: 90%;float: left">
+
+                <style>
+                    .div_row label{
+                        float: left;
+                        display: inline-block;
+                        text-align: right;
+                        margin-right: 5px;
+                    }
+                    .div_wrapper{
+                        overflow: hidden;
+                        margin-bottom: 8px;
+                    }
+                    .div_wrapper input,.div_wrapper select{
+                        box-sizing: border-box;
+                        border: 1px solid #dfdfdf;
+                        width: 100%;
+                        height: 30px;
+                        outline: medium;
+                    }
+                </style>
+                <div class="div_row" style="width: 20%;float: left">
+                    <label style="font-size: 14px;color: #666666;padding-left: 14px">角色名称</label>
+                    <div class="div_wrapper">
+                        <input name="rolename" id="rolename" >
+                    </div>
+                </div>
+                </div>
+
+            <div style="width: 10%;float: left;margin-top: 0px">
+                <div id="employeeSeatchBut" style="float: right;width: 77px;height: 30px;background: url(../images/sousuo.png);margin: 22px 18px 0px 0px;font-size: 15px;color: white;line-height: 30px;text-align: center">搜索</div>
+            </div>
+        </div>
+        <div style="width: 100%;min-height: 560px;border: 1px solid #e4e4e4;margin-top: 12px;padding: 10px 0px 0px 10px">
+            <table class="table-style-1 table-style-1-a table-hover mb-0-5" id="role_Table">
+                <thead>
+                <tr class="sch">
+                    <td style="width: 5%;" align="center">
+                        <div class="t">序号</div>
+                    </td>
+                    <td style="width: 10%;" align="center">
+                        <div class="t">编号<span class="sort-ico" style="padding-top:10px;"><i
+                                        class=" dot-top icon-caret-up"></i><i
+                                        class="dot-bottom icon-caret-down"></i></span></div>
+                    </td>
+                    <td style="width: 10%;" align="center">
+                        <div class="t text-left">角色名称<span class="sort-ico"
+                                                           style="padding-top:10px;"><i
+                                        class="dot-top icon-caret-up"></i><i
+                                        class="dot-bottom icon-caret-down"></i></span>
+                        </div>
+                    </td>
+                    <td style="width: 10%;" align="center">
+                        <div class="t text-left">备注<span class="sort-ico"
+                                                         style="padding-top:10px;"><i
+                                        class="dot-top icon-caret-up"></i><i
+                                        class="dot-bottom icon-caret-down"></i></span>
+                        </div>
+                    </td>
+                    <td style="width:10%;" align="center">
+                        <div class="t">创建人<span class="sort-ico" style="padding-top:10px;"><i
+                                        class="dot-top icon-caret-up"></i><i
+                                        class="dot-bottom icon-caret-down"></i></span></div>
+                    </td>
+                    <td style="width: 15%" align="center">
+                        <div class="t">创建时间<span class="sort-ico" style="padding-top:10px;"><i
+                                        class="dot-top icon-caret-up"></i><i
+                                        class="dot-bottom icon-caret-down"></i></span></div>
+                    </td>
+                    <td style="width: 20%;" align="center">
+                        <div class="t">操作</div>
+                    </td>
+                </tr>
+                </thead>
+                <tbody  id="start">
+                </tbody>
+            </table>
+            <nav class="pagination-wrap clearfix">
+                <div class="ml-2 mt-1 mb-2">
+                    <a class="form-btn-upload" id="addStaffModal" data-toggle="modal"><i class="icon-plus-sign"></i>添加新角色</a>
+                </div>
+            </nav>
+        </div>
+    </div>
+
+    <div class="modal modal-noline fade" id="newusername" tabindex="-1" role="dialog"
+         aria-labelledby="addAccountModalLabel"
+         aria-hidden="true">
+        <div class="modal-outer">
+            <div class="modal-middle">
+                <div class="modal-dialog modal-inner w-65 float-none">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal"></button>
+                        </div>
+                        <div class="modal-body p-1 pt-3 pl-5">
+                            <form class="form-horizontal" action="" method="post" id="add_form">
+                                <div class="form-group ">
+                                    <label class="control-label w-9" id="labelname"
+                                           style="font-size: 29px;width: 165px;margin: 0px 0px 0 28px;">添加新角色</label>
+                                </div>
+                                <div class="form-group ">
+                                    <div style="float: left;width: 265px;min-height: 300px;border-left: 1px solid #ddd;border-right: 1px solid #ddd;">
+
+                                        <div style="width: 100%;height: 60px;background-color: #0092DB;color:#fff;border: 1px solid #e4e4e4;line-height: 60px;font-size: 16px;">
+                                            添加权限
+                                        </div>
+                                        <div class="tree_add" style="height:330px;overflow-y:auto;"></div>
+
+                                    </div>
+                                    <div style="float: left;width: 265px;min-height: 390px;border-left: 1px solid #ddd;border-right: 1px solid #ddd;margin: 0px 0px 0px 1px ;">
+                                    <div style="width: 100%;height: 60px;background-color: #0092DB;color:#fff;border: 1px solid #e4e4e4;line-height: 60px;font-size: 16px;">
+                                            基本信息
+                                        </div>
+                                        <div style="float: left;font-size: 14px;color: #666666;padding-left: 3px;">
+                                            编号<input
+                                                    name="a_roleno" id="a_roleno"
+                                                    style="width: 170px;height: 30px;border: 1px solid #dbe0e4;margin: 22px 18px 0px 5px"
+                                                    placeholder="系统自动生产" disabled></div>
+                                        <div style="float: left;font-size: 14px;color: #666666;padding-left: 3px;">
+                                            名称<input
+                                                    name="a_rolename" id="a_rolename"
+                                                    style="width: 170px;height: 30px;border: 1px solid #dbe0e4;margin: 22px 18px 0px 5px" placeholder="请输入名称" data-rule="required;">
+                                        </div>
+                                        <div style="float: left;font-size: 14px;color: #666666;padding-left: 3px;">
+                                            备注<input
+                                                    name="a_remarks" id="a_remarks"
+                                                    style="width: 170px;height: 30px;border: 1px solid #dbe0e4;margin: 22px 18px 0px 5px">
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <div class="modal-footer text-center pb-2">
+                                    <button type="button"
+                                            class="btn btn-default btn-default-green w-14 font-16 float-none"
+                                            data-dismiss="modal" id="add_account_cancel">取消
+                                    </button>
+                                    <button id="open_user" type="button"
+                                            class="btn btn-success w-14 font-16 float-none ml-2">确认
+                                    </button>
+                                </div>
+
+                            </form>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal modal-noline fade" id="editusername" tabindex="-1" role="dialog"
+         aria-labelledby="addAccountModalLabel"
+         aria-hidden="true">
+        <div class="modal-outer">
+            <div class="modal-middle">
+                <div class="modal-dialog modal-inner w-65 float-none">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal"></button>
+                        </div>
+                        <div class="modal-body p-1 pt-3 pl-5">
+                            <form class="form-horizontal" action="" method="post" id="edit_form">
+                                <input id="e_seq_no" type="hidden" name="e_seq_no">
+                                <div class="form-group ">
+                                    <label class="control-label w-9"
+                                           style="font-size: 29px;width: 165px;margin: 0px 0px 0 28px;">修改角色</label>
+                                </div>
+                                <div class="form-group ">
+                                    <div style="float: left;width: 265px;min-height: 300px;border-left: 1px solid #ddd;border-right: 1px solid #ddd;">
+
+                                        <div style="width: 100%;height: 60px;border: 1px solid #e4e4e4;line-height: 60px;font-size: 16px;background-color: #0092DB;color:#fff;">
+                                            更改权限
+                                        </div>
+                                        <div class="tree_edit" style="height:330px;overflow-y:auto;"></div>
+
+                                    </div>
+                                    <div style="float: left;width: 265px;min-height: 390px;border-left: 1px solid #ddd;border-right: 1px solid #ddd;margin: 0px 0px 0px 1px ;">
+
+                                        <div style="width: 100%;height: 60px;border: 1px solid #e4e4e4;line-height: 60px;font-size: 16px;background-color: #0092DB;color:#fff;">
+                                            基本信息
+                                        </div>
+                                        <div style="float: left;font-size: 14px;color: #666666;padding-left: 3px;">
+                                            编号<input
+                                                    name="e_roleno" id="e_roleno"
+                                                    style="width: 170px;height: 30px;border: 1px solid #dbe0e4;margin: 22px 18px 0px 5px"
+                                                    placeholder="系统自动生产" disabled></div>
+                                        <div style="float: left;font-size: 14px;color: #666666;padding-left: 3px;">
+                                            名称<input
+                                                    name="e_rolename" id="e_rolename"
+                                                    style="width: 170px;height: 30px;border: 1px solid #dbe0e4;margin: 22px 18px 0px 5px">
+                                        </div>
+                                        <div style="float: left;font-size: 14px;color: #666666;padding-left: 3px;">
+                                            备注<input
+                                                    name="e_remarks" id="e_remarks"
+                                                    style="width: 170px;height: 30px;border: 1px solid #dbe0e4;margin: 22px 18px 0px 5px">
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <div class="modal-footer text-center pb-2">
+                                    <button type="button"
+                                            class="btn btn-default btn-default-green w-14 font-16 float-none"
+                                            data-dismiss="modal" id="add_account_cancel">取消
+                                    </button>
+                                    <button id="open_edit" type="button"
+                                            class="btn btn-success w-14 font-16 float-none ml-2" data-dismiss="modal">确认
+                                    </button>
+                                </div>
+
+                            </form>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 弹出删除确认信息 -->
+    <div style="width: 30%;margin: 0 auto" class="modal modal-noline fade" id="sureDel" tabindex="-1" role="dialog"
+         aria-labelledby="sureDelLabel" aria-hidden="true">
+        <div class="modal-middle">
+            <div class="modal-dialog-notice modal-inner">
+                <div class="modal-content">
+                    <div class="background-grey-2 p-1 indent-1 modal-dialog-notice-radius">
+                        <span class="font-20 wryh text-zdy-2">信息确认：</span>
+                    </div>
+                    <div class="p-3">
+                        <p class="text-center font-18 wryh text-gray-light">确认要删除该条信息吗？</p>
+
+                        <div class="modal-footer text-center pb-2">
+                            <button type="button" class="btn btn-default btn-default-blue font-16 float-none"
+                                    data-dismiss="modal">取消
+                            </button>
+                            <button type="button" class="btn btn-primary font-16 float-none ml-1" id="confirmDialog"
+                                    data-dismiss="modal">确定
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--私有js-->
+<script src="/js/table-ajax-jsonp.js"></script>
+<script src="js/Backstage/roles.js"></script>
+<!--end-->

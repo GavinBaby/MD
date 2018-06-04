@@ -1,0 +1,103 @@
+.dookaycity{ 
+  position:absolute;
+  left:0;
+  top:0;
+  z-index:1000;
+  display:none;
+  padding:10px;
+  width:410px;
+  font-size:12px;
+  line-height:18px;
+  border:1px solid #ccc;
+  background-color:#fff;
+  box-shadow:1px 1px 3px #ddd;
+}
+.dookaycity *{ 
+  -webkit-box-sizing:content-box;
+  -moz-box-sizing:content-box;
+  box-sizing:content-box;
+}
+.dookaycity .close{ 
+  position:absolute;
+  right:10px;
+  top:10px;
+  z-index:10;
+  display:block;
+  height:18px;
+  width:18px;
+  font-size: 21px;
+  color: #ccc;
+  text-shadow: 0 1px 0 #fff;
+  opacity: 1;
+  filter: alpha(opacity=100);  
+  text-align:center;
+  font-weight:normal;
+}
+.dookaycity .close:hover{ 
+  color:#999;
+  border-radius:3px;
+  background-color:#fafafa;
+}
+.dookaycity .dookaycity-desc{ 
+  height:18px;
+  font-size:12px;
+  margin:0;
+  color:#999;
+}
+.dookaycity.open{ display:block;}
+.dookaycity-tab{ 
+  padding:0;
+  margin:0;
+  height:34px;
+  border-bottom:2px solid #ededed;
+}
+.dookaycity-tab li{ 
+  float:left;
+  height:34px;
+  padding:0 10px;
+  line-height:34px;
+  cursor:pointer;
+}
+.dookaycity-tab .active{ 
+  font-weight:bold;
+  color:#1d9af2;
+  border-bottom:2px solid #279ff2;
+}
+.dookaycity-tabpanel{ padding:5px 0;}
+.dookaycity-tabpanel .tabpanel{ 
+  display:none;
+}
+.dookaycity-tabpanel .tabpanel.active{ display:block;}
+.dookaycity-tabpanel dl:after{content:".";display:block;height:0;clear:both;visibility:hidden;}
+.dookaycity-tabpanel dl{display:inline-block;}
+* html .dookaycity-tabpanel dl{height:1%;}
+.dookaycity-tabpanel dl{
+  display:block;
+  margin:0;
+  padding:0;
+}
+.dookaycity-tabpanel dt{ 
+  float:left;
+  width:30px;
+  text-align:center;
+  height:24px;
+  line-height:24px;
+  color:#fd9d35;
+}
+.dookaycity-tabpanel dd{ 
+  margin-left:30px;
+}
+.dookaycity-tabpanel dd a{ 
+  display:inline-block;
+  height:24px;
+  line-height:24px;
+  padding:0 10px;
+}
+.dookaycity-tabpanel dd a:hover{ 
+  text-decoration:none;
+  background-color:#279ff2;
+  color:#fff;
+}
+.dookaycity-tabpanel .special dd{ 
+  margin-left:0;
+}

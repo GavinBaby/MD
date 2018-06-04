@@ -1,0 +1,6 @@
+[2017-07-07 01:03:44.793] [INFO] logInfo - ::ffff:127.0.0.1 -  GET /home 304 
+[2017-07-07 01:03:44.802] [INFO] logInfo - ::ffff:127.0.0.1 -  GET /js/backstage/home.js?_=1499358983086 200 
+[2017-07-07 01:05:00.227] [INFO] logInfo - ::ffff:127.0.0.1 -  GET /ICcard 304 
+[2017-07-07 01:05:00.238] [INFO] logInfo - ::ffff:127.0.0.1 -  GET /js/table-ajax.js?_=1499358983087 200 
+[2017-07-07 01:05:00.247] [INFO] logInfo - ::ffff:127.0.0.1 -  GET /images/sousuo.png 304 
+[2017-07-07 01:05:04.632] [INFO] logInfo - ::ffff:127.0.0.1 -  GET /moneybuy 304 

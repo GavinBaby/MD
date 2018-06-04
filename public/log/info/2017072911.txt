@@ -1,0 +1,5 @@
+[2017-07-29 11:03:20.180] [INFO] logInfo - ::ffff:127.0.0.1 -  GET /meter_reading?aid=1001 304 
+[2017-07-29 11:03:20.190] [INFO] logInfo - ::ffff:127.0.0.1 -  GET /js/table-ajax.js?_=1501297002269 200 
+[2017-07-29 11:03:20.197] [INFO] logInfo - ::ffff:127.0.0.1 -  GET /js/Backstage/meter_reading.js?_=1501297002270 200 
+[2017-07-29 11:03:20.215] [INFO] logInfo - ::ffff:127.0.0.1 -  GET /images/sousuo.png 304 
+[2017-07-29 11:03:20.343] [INFO] logInfo - ::ffff:127.0.0.1 -  GET /collector/list?company=2&areaId=1001&villageId=&id=&location=&sEcho=1&recordStart=0&pageSize=10&sortName=seq_no&sortType=desc 304 

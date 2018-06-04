@@ -1,0 +1,1 @@
+[2017-09-23 16:37:07.204] [INFO] logInfo - buffer is not defined

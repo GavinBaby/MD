@@ -1,0 +1,164 @@
+/*jigang*/
+/*餐饮--菜品发布--基本信息*/
+.list-set-menu ul li{
+  height: 32px;
+  line-height: 32px;
+  background: url(../images/line-dotted.png) repeat-x center;
+}
+.list-set-menu ul li:hover{
+  background-color: #f2f2f2;
+}
+.list-set-menu ul li .name{
+  min-width: 116px;
+  background: #fff;
+  padding-right: 5px;
+}
+.list-set-menu ul li .quantity{
+  min-width: 147px;
+  padding:0 24px 0 18px;
+  background: #fff;
+}
+.list-set-menu ul li:hover .name{
+  padding-left: 10px;
+}
+.list-set-menu ul li:hover .name,
+.list-set-menu ul li:hover .quantity{
+  background-color: #f2f2f2;
+}
+.list-set-menu ul li .quantity .ui-spinner{
+  width: 52px;
+  line-height: 13px;
+  padding:0 13px;
+  position: relative;
+  top: -1px;
+}
+.list-set-menu ul li .quantity .ui-spinner-input{
+  width: 26px;
+  height: 13px;
+  line-height: 13px;
+  margin: 0;
+  padding: 0;
+  vertical-align: top;
+  text-align: center;
+  outline: none;
+}
+.list-set-menu ul li .quantity .ui-spinner-button{
+  position: absolute;
+  top: 0;
+  width: 13px;
+  height: 13px;
+  background: #56b4f7;
+}
+.list-set-menu ul li .quantity .ui-spinner-down{left: 0;}
+.list-set-menu ul li .quantity .ui-spinner-up{right: 0;}
+.list-set-menu ul li .quantity .ui-spinner-button .ui-icon{
+  width: 13px;
+  height: 13px;
+  background: url(../images/ico-spinner.png) no-repeat;
+  margin: 0;
+  position: static;
+}
+.list-set-menu ul li .quantity .ui-spinner-button .ui-icon-triangle-1-n{
+  background-position: -20px 0;
+}
+.list-set-menu ul li .quantity .ui-spinner-button .ui-icon-triangle-1-s{
+  background-position: 0 0;
+}
+.list-set-menu ul li .link-blue{
+  color:#0066cc;
+}
+.list-set-menu .total{
+  line-height: 32px;
+  padding:9px 0;
+  border-top:solid 1px #56b4f7;
+}
+.list-set-menu .total span{
+  color:#ff850d;
+}
+.list-set-menu .total .price{
+  font-size: 16px;
+}
+.add-box{
+  border-top: solid 1px #e6e6e6;
+}
+.modal-add-box{
+  width: 935px;
+  background: #fff;
+}
+.list-menu-add ul li{
+  float: left;
+  width: 151px;
+  height: 147px;
+  border:solid 1px #e6e6e6;
+  position: relative;
+  margin:1px 12px 12px;
+}
+.list-menu-add ul li .pic img{
+  display: block;
+  width: 149px;
+  height: 90px;
+}
+.list-menu-add ul li .cnt span{
+  display: block;
+}
+.list-menu-add ul li .cnt span.name{
+  font-size: 14px;
+  color:#000;
+  margin-bottom: 2px;
+}
+.list-menu-add ul li .cnt span.price{
+  color:#666;
+  font-size: 12px;
+}
+.list-menu-add ul li .btn-op{
+  position: absolute;
+  right: 11px;
+  bottom: 17px;
+  display: inline-block;
+}
+.list-menu-add ul li.added{
+  width: 151px;
+  height: 149px;
+  border:dashed 2px #b3b3b3;
+  margin:0px 11px 11px;
+}
+.list-menu-add ul li.added .outer{
+  -webkit-filter: grayscale(100%); 
+  -moz-filter: grayscale(100%); 
+  -ms-filter: grayscale(100%); 
+  -o-filter: grayscale(100%); 
+  filter:progid:DXImageTransform.Microsoft.BasicImage(grayscale=1); 
+  _filter:none; 
+}
+.menu-add-page{
+  border-top:solid 1px #56b4f7;
+  padding:10px 12px 0 0;
+}
+.msg-price strong{
+  font-size: 18px;
+  color:#f35a0c;
+}
+
+.detail-set .list-set-menu{border-top:solid 1px #56b4f7;margin-top: 10px;}
+.detail-set .list-set-menu ul li .quantity{padding-right: 0;}
+.detail-set .list-set-menu ul li:hover{background-color: transparent;}
+.detail-set .list-set-menu ul li:hover .name{padding:0;background-color: #fff;}
+.detail-set .list-set-menu ul li:hover .quantity{padding:0 0 0 18px;background-color: #fff;}
+.text-black{
+  color:#333;
+}
+.line-dashed div{height: 1px;border-bottom: dashed 1px #ccc;overflow: hidden;}
+.addTicketTypeModal{
+  width: 430px;
+}
+.ticket-type-control{
+  line-height: 25px;
+}
+.ticket-type-control a{
+  color:#0066cc;
+  font-size: 18px;
+  font-weight: normal;
+}
+.form-horizontal .text-left{
+  text-align: left;
+}

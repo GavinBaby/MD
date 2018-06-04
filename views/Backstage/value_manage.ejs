@@ -1,0 +1,129 @@
+<div id="value_mapping_page">
+    <!--start-->
+    <div style="float: left;width: 1146px;min-height: 700px;margin: 20px 0px 0px 20px ">
+        <div style="width: 100%;height: 74px;background: #f3f3f3;border: 1px solid #e4e4e4;line-height: 74px">
+            <div style="float: left;font-size: 14px;color: #666666;padding-left: 14px">排序</div>
+            <div style="float: left;margin-left:16px;"><input id="seq_no" name="seq_no" style="width: 90px;height: 30px;border: 1px solid #dbe0e4"></div>
+            <div style="float: left;font-size: 14px;color: #666666;padding-left: 14px">关键字</div>
+            <div style="float: left;margin-left:16px;"><input id="type_like" style="width: 110px;height: 30px;border: 1px solid #dbe0e4"></div>
+            <div style="float: left;font-size: 14px;color: #666666;padding-left: 14px">名称</div>
+            <div style="float: left;margin-left:16px;"><input name="key_name" id="key_name" style="width: 110px;height: 30px;border: 1px solid #dbe0e4"></div>
+
+            <div id="mapSeatchBut" style="float: right;width: 77px;height: 30px;background: url(../images/sousuo.png);margin: 22px 18px 0px 0px;font-size: 15px;color: white;line-height: 30px;text-align: center">搜索</div>
+        </div>
+        <div style="width: 100%;min-height: 560px;border: 1px solid #e4e4e4;margin-top: 12px;padding: 10px 0px 0px 10px">
+            <table class="table-style-1 table-style-1-a table-hover mb-0-5" id="account_Table">
+                <thead>
+                <tr class="sch">
+                    <td style="width: 20%;" align="center">
+                        <div class="t text-left" >排序
+                            <span class="sort-ico" style="padding-right:60px;padding-top:10px;"><i class="dot-top icon-caret-up"></i><i class="dot-bottom icon-caret-down"></i></span>
+                        </div>
+                    </td>
+                    <td style="width: 20%;" align="center">
+                        <div class="t">关键字<span class="sort-ico" style="padding-right:85px;padding-top:10px;"><i class="dot-top icon-caret-up"></i><i class="dot-bottom icon-caret-down"></i></span></div>
+                    </td>
+                    <td style="width: 20%;" align="center">
+                        <div class="t">名称<span class="sort-ico" style="padding-right:55px;padding-top:10px;"><i class="dot-top icon-caret-up"></i><i class="dot-bottom icon-caret-down"></i></span></div>
+                    </td>
+                    <td style="width: 20%;" align="center">
+                        <div class="t">备注<span class="sort-ico" style="padding-right:85px;padding-top:10px;"><i class="dot-top icon-caret-up"></i><i class="dot-bottom icon-caret-down"></i></span></div>
+                    </td>
+                    <td style="width: 20%;" align="center">
+                        <div class="t">操作</div>
+                    </td>
+                </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+            <nav class="pagination-wrap clearfix">
+                <div class="ml-2 mt-1 mb-2">
+                    <a class="form-btn-upload" id="addmap" data-toggle="modal"><i class="icon-plus-sign"></i>添加新字典</a>
+                </div>
+            </nav>
+        </div>
+    </div>
+    <!--编辑字典-->
+    <div class="modal modal-noline fade" id="addMapModal" tabindex="-1" role="dialog" aria-labelledby="addAccountModalLabel" aria-hidden="true">
+        <div class="modal-outer">
+            <div class="modal-middle">
+                <div class="modal-dialog modal-inner w-65 float-none">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal"></button>
+                        </div>
+                        <div class="modal-body p-1 pt-3 pl-5">
+                            <form class="form-horizontal" action="" method="post"   id="add_account_form">
+                                <input id="account_id" type="hidden" name="account_id">
+                                <div class="form-group ">
+                                    <label id="areaLab" class="control-label w-9" style="font-size: 29px;width: 135px;"></label>
+                                </div>
+                                <div class="form-group ">
+                                    <label class="control-label w-9">排序：</label>
+                                    <div class="w-40 relative">
+                                        <input id="code" class="form-control w-32" type="text" name="account_id" maxlength="20"  >
+                                    </div>
+                                </div>
+                                <div class="form-group ">
+                                    <label class="control-label w-9">关键字：</label>
+                                    <div class="w-40 relative">
+                                        <input id="pid" class="form-control w-32" type="text" name="account_id" maxlength="20" >
+                                    </div>
+                                </div>
+                                <div class="form-group ">
+                                    <label class="control-label w-9">名称：</label>
+                                    <div class="w-40 relative">
+                                        <input id="dicname" class="form-control w-32" type="text" name="account_id" maxlength="20" >
+                                    </div>
+                                </div>
+                                <div class="form-group ">
+                                    <label class="control-label w-9">备注：</label>
+                                    <div class="w-40 relative">
+                                        <input id="remark" class="form-control w-32" type="text" name="account_id" maxlength="20" >
+                                    </div>
+                                </div>
+                                <div class="modal-footer text-center pb-2">
+                                    <button type="button" class="btn btn-default btn-default-green w-14 font-16 float-none" data-dismiss="modal" id="add_account_cancel">取消</button>
+                                    <button id="save_map" type="button" class="btn btn-success w-14 font-16 float-none ml-2">保存</button>
+                                </div>
+                            </form>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 确定框 -->
+    <div class="modal modal-noline fade" id="delMapModal" tabindex="-1" role="dialog" aria-labelledby="addAccountModalLabel" aria-hidden="true">
+        <div class="modal-outer">
+            <div class="modal-middle">
+                <div class="modal-dialog modal-inner w-65 float-none">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal"></button>
+                        </div>
+                        <div class="modal-body p-1 pt-3 pl-5" style="margin: -12px 19px 0px -23px;">
+                            <form class="form-horizontal" action="" method="post"   id="add_account_form">
+                                <input id="account_id" type="hidden" name="account_id">
+                                <div class="form-group ">
+                                    <label class="control-label w-9" style="font-size: 29px;width: 284px;">是否确定删除此字典</label>
+                                </div>
+                                <div class="modal-footer text-center pb-2">
+                                    <button type="button" class="btn btn-default btn-default-green w-14 font-16 float-none" data-dismiss="modal" id="add_account_cancel">取消</button>
+                                    <button id="del_map" type="button" class="btn btn-success w-14 font-16 float-none ml-2">确定</button>
+                                </div>
+                            </form>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--    &lt;!&ndash; 表格共通&ndash;&gt;-->
+    <script src="js/table-ajax.js"></script>
+    <!--私有js-->
+    <script src="js/backstage/value_mapping.js"></script>
+    <!--end-->
+</div>

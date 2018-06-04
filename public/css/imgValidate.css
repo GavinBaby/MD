@@ -1,0 +1,29 @@
+.code
+{
+    font-family:Arial;
+    font-style:italic;
+    color:blue;
+    font-size:16px;
+    border:0;
+    padding:2px 3px;
+    letter-spacing:3px;
+    font-weight:bolder;
+    float:left;
+    cursor:pointer;
+    width: 88px;
+    height: 50px;
+    line-height:45px;
+    text-align:center;
+    vertical-align:middle;
+
+}
+a
+{
+    text-decoration:none;
+    font-size:12px;
+    color:#288bc4;
+}
+a:hover
+{
+    text-decoration:underline;
+}

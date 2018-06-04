@@ -1,0 +1,208 @@
+<div id="watermeter_page">
+    <input type="hidden" id="seq_no_edit">
+    <input type="hidden" id="name_edit">
+    <!--start-->
+    <div style="float: left;width: 98%;margin: 20px 0px 0px 20px ">
+        <div style="width: 100%;height: 54px;background: #f3f3f3;border: 1px solid #e4e4e4;line-height: 74px">
+            <div style="width: 90%;float: left">
+
+                <style>
+                    .div_row{
+                        line-height: 50px;height: 50px;
+                    }
+                    .div_row label{
+                        float: left;
+                        display: inline-block;
+                        text-align: right;
+                        margin-right: 5px;
+                    }
+                    .div_wrapper{
+                        overflow: hidden;
+                        margin-bottom: 8px;
+                    }
+                    .div_wrapper input,.div_wrapper select{
+                        box-sizing: border-box;
+                        border: 1px solid #dfdfdf;
+                        width: 100%;
+                        height: 30px;
+                        outline: medium;
+                    }
+                </style>
+
+
+                <div class="div_row" style="width: 20%;float: left;">
+                    <label style="font-size: 14px;color: #666666;padding-left: 14px">入库单号</label>
+                    <div class="div_wrapper">
+                        <input name="name_q" id="name_q">
+                    </div>
+                </div>
+                <div class="div_row" style="width: 20%;float: left ;">
+                    <label style="font-size: 14px;color: #666666;padding-left: 14px">仓库</label>
+                    <div class="div_wrapper" >
+                        <select id="status_q" name="status_q">
+                            <option value="">请选择</option>
+                            <option value="1">仓库一</option>
+                            <option value="2">仓库二</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="div_row" style="width: 20%;float: left ;">
+                    <label style="font-size: 14px;color: #666666;padding-left: 14px">供应商</label>
+                    <div class="div_wrapper" >
+                        <select id="status_q" name="status_q">
+                            <option value="">请选择</option>
+                            <option value="1">供应商一</option>
+                            <option value="2">供应商二</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="div_row" style="width: 20%;float: left;">
+                    <label style="font-size: 14px;color: #666666;padding-left: 14px">开始日期</label>
+                    <div class="div_wrapper">
+                        <input name="name_q" id="name_q">
+                    </div>
+                </div>
+                <div class="div_row" style="width: 20%;float: left;">
+                    <label style="font-size: 14px;color: #666666;padding-left: 14px">结束日期</label>
+                    <div class="div_wrapper">
+                        <input name="name_q" id="name_q">
+                    </div>
+                </div>
+            </div>
+
+            <div style="width: 10%;float: left;margin-top: 0px">
+                <div id="employeeSeatchBut" style="cursor:pointer;float: right;width: 77px;height: 30px;background: url(../images/sousuo.png);margin: 12px 18px 0px 0px;font-size: 15px;color: white;line-height: 30px;text-align: center">搜索</div></div>
+        </div>
+        <div style="width: 100%;min-height: 320px;border: 1px solid #e4e4e4;margin-top: 12px;padding: 10px 0px 0px 10px">
+            <table class="table-style-1 table-style-1-a table-hover mb-0-5" id="area_Table">
+                <thead>
+                <tr class="sch">
+                    <td style="width: 14%;" align="center">
+                        <div class="t text-left" >入库单号
+                            <span class="sort-ico" style="padding-top:10px;"><i class="dot-top icon-caret-up"></i><i class="dot-bottom icon-caret-down"></i></span>
+                        </div>
+                    </td>
+                    <td style="width: 14%;" align="center">
+                        <div class="t">仓库<span class="sort-ico" style="padding-top:10px;"><i class="dot-top icon-caret-up"></i><i class="dot-bottom icon-caret-down"></i></span></div>
+                    </td>
+                    <td style="width: 14%;" align="center">
+                        <div class="t">供应商<span class="sort-ico" style="padding-top:10px;"><i class="dot-top icon-caret-up"></i><i class="dot-bottom icon-caret-down"></i></span></div>
+                    </td>
+                    <td style="width: 14%;" align="center">
+                        <div class="t">金额<span class="sort-ico" style="padding-top:10px;"><i class="dot-top icon-caret-up"></i><i class="dot-bottom icon-caret-down"></i></span></div>
+                    </td>
+                    <td style="width: 14%;" align="center">
+                        <div class="t text-left" >收货单号
+                            <span class="sort-ico" style="padding-top:10px;"><i class="dot-top icon-caret-up"></i><i class="dot-bottom icon-caret-down"></i></span>
+                        </div>
+                    </td>
+                    <td style="width: 14%;" align="center">
+                        <div class="t text-left" >入库日期
+                            <span class="sort-ico" style="padding-top:10px;"><i class="dot-top icon-caret-up"></i><i class="dot-bottom icon-caret-down"></i></span>
+                        </div>
+                    </td>
+                    <td style="width: 14%;" align="center">
+                        <div class="t">操作</div>
+                    </td>
+                </tr>
+                </thead>
+                <tbody>
+                <tr role="row" class="odd">
+                    <td><div style="text-align: center;">2017100001</div></td>
+                    <td><div style="text-align: center;">舟山仓库</div></td>
+                    <td><div style="text-align: center;">怡宝饮料</div></td>
+                    <td><div style="text-align: center;">8888888</div></td>
+                    <td><div style="text-align: center;">02581</div></td>
+                    <td><div style="text-align: center;">2017-10-15</div></td>
+                    <td><div style="text-align: center;"><a class="employee_edit" href="javascript:void(0)" data-no="10000000001" data-id="0" data-phone="13484218482" data-toggle="modal">查看</a></div></td>
+                </tr>
+                <tr role="row" class="odd">
+                    <td><div style="text-align: center;">2017100001</div></td>
+                    <td><div style="text-align: center;">舟山仓库</div></td>
+                    <td><div style="text-align: center;">怡宝饮料</div></td>
+                    <td><div style="text-align: center;">8888888</div></td>
+                    <td><div style="text-align: center;">02581</div></td>
+                    <td><div style="text-align: center;">2017-10-15</div></td>
+                    <td><div style="text-align: center;"><a class="employee_edit" href="javascript:void(0)" data-no="10000000001" data-id="0" data-phone="13484218482" data-toggle="modal">查看</a></div></td>
+                </tr>
+                <tr role="row" class="odd">
+                    <td><div style="text-align: center;">2017100001</div></td>
+                    <td><div style="text-align: center;">舟山仓库</div></td>
+                    <td><div style="text-align: center;">怡宝饮料</div></td>
+                    <td><div style="text-align: center;">8888888</div></td>
+                    <td><div style="text-align: center;">02581</div></td>
+                    <td><div style="text-align: center;">2017-10-15</div></td>
+                    <td><div style="text-align: center;"><a class="employee_edit" href="javascript:void(0)" data-no="10000000001" data-id="0" data-phone="13484218482" data-toggle="modal">查看</a></div></td>
+                </tr>
+
+                </tbody>
+            </table>
+            <nav class="pagination-wrap clearfix">
+                <!--<div class="ml-2 mt-1 mb-2">
+                    <a class="form-btn-upload employee_edit" id="addStaffModal" data-toggle="modal"><i class="icon-plus-sign"></i>批量确认</a>
+                </div>-->
+            </nav>
+        </div>
+    </div>
+
+
+
+    <!-- 添加集中器弹窗 -->
+    <div class="modal modal-noline fade" id="addAreaModal" tabindex="-1" role="dialog" aria-labelledby="addAccountModalLabel" aria-hidden="true">
+        <div class="modal-outer">
+            <div class="modal-middle">
+                <div class="modal-dialog modal-inner float-none" style="width:650px;">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal"></button>
+                        </div>
+                        <div class="modal-body p-1 pt-3 pl-2">
+
+                            <form class="form-horizontal" action="" method="post"   id="add_form">
+                                <input id="seq_no" type="hidden" name="seq_no">
+                                <input id="res" name="res" type="reset" style="display:none;" />
+                                <div class="form-group ">
+                                    <label class="control-label w-9" style="font-size: 29px;width: 165px;margin: 0px 0px 0 28px;">入库单确认</label>
+                                </div>
+                                <div class="form-group ">
+                                    <label class="control-label w-12">入库日期：</label>
+                                    <div class="w-40">
+                                        <input id="w_id" class="form-control" type="text" name="w_id"   maxlength="20" value="2017-10-15" >
+                                    </div>
+                                </div>
+                                <div class="form-group ">
+                                    <label class="control-label w-12">收货单号：</label>
+                                    <div class="w-40">
+                                        <input id="w_id" class="form-control" type="text" name="w_id"   maxlength="20" value="2017-10-15" >
+                                    </div>
+                                </div>
+
+
+
+
+                                <div class="modal-footer text-center pb-2">
+                                    <button type="button" class="btn btn-default btn-default-green w-14 font-16 float-none" data-dismiss="modal" id="add_account_cancel">取消</button>
+                                    <button id="save_area" type="button" class="btn btn-success w-14 font-16 float-none ml-2">保存</button>
+                                </div>
+
+                            </form>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</div>
+<!--私有js-->
+<script>
+
+    $(".employee_edit").on("click",function(){
+        $.learuntab.addTab(411,"/godownEntry_add","入库单·详情");
+    })
+</script>
+<!--<script src="/js/table-ajax.js"></script>-->
+<!--<script src="/js/Backstage/watermeter.js"></script>-->
+<!--end-->

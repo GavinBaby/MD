@@ -1,0 +1,12 @@
+[2017-07-08 10:53:49.726] [INFO] logInfo - ::ffff:127.0.0.1 -  GET / 302 
+[2017-07-08 10:53:49.734] [INFO] logInfo - ::ffff:127.0.0.1 -  GET /login 200 
+[2017-07-08 10:53:49.749] [INFO] logInfo - ::ffff:127.0.0.1 -  GET /css/depei.css 304 
+[2017-07-08 10:53:49.755] [INFO] logInfo - ::ffff:127.0.0.1 -  GET /css/imgValidate.css 304 
+[2017-07-08 10:53:49.756] [INFO] logInfo - ::ffff:127.0.0.1 -  GET /js/imgValidate.js 304 
+[2017-07-08 10:53:49.756] [INFO] logInfo - ::ffff:127.0.0.1 -  GET /js/jquery-2.1.4.min.js 304 
+[2017-07-08 10:53:49.760] [INFO] logInfo - ::ffff:127.0.0.1 -  GET /images/jcsw/login_b1.png 304 
+[2017-07-08 10:53:49.765] [INFO] logInfo - ::ffff:127.0.0.1 -  GET /images/jcsw/login_b2.png 304 
+[2017-07-08 10:53:49.770] [INFO] logInfo - ::ffff:127.0.0.1 -  GET /images/jcsw/login_b3.png 304 
+[2017-07-08 10:53:49.791] [INFO] logInfo - ::ffff:127.0.0.1 -  GET /images/jcsw/login.jpg 304 
+[2017-07-08 10:53:49.815] [INFO] logInfo - ::ffff:127.0.0.1 -  GET /favicon.ico 404 
+[2017-07-08 10:53:51.830] [INFO] logInfo - ::ffff:127.0.0.1 -  GET /login1 404 

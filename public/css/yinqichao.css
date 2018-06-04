@@ -1,0 +1,472 @@
+.y-system-number{
+  line-height: 34px;
+  font-size: 16px;
+}
+
+input.y-product-number{
+  float: left;
+  width: 80%;
+}
+
+input.y-product-number + a.y-product-number{
+  float: right;
+  width: 18%;
+  background: #28af63;
+  color: #fff;
+  text-align: center;
+  line-height: 34px;
+}
+
+input.y-product-number + a.y-product-number:hover{
+  text-decoration: none;
+}
+
+.y-destination-list li{
+  float: left;
+  margin: 0;
+  width: 12.5%;
+}
+
+.y-product-includ-list li{
+  float: left;
+  margin-right: 20px;
+}
+
+.y-product-includ-list label,
+.y-destination-list label{
+  font-weight: normal;
+  line-height: 34px;
+  margin: 0;
+  cursor: pointer;
+}
+
+.y-product-includ-list label input,
+.y-destination-list label input{
+  cursor: pointer;
+  margin-right: 5px;
+}
+
+.y-theme-choose-list li{
+  float: left;
+  width: 11.11111111111111111111111%;
+}
+
+.y-theme-choose-list li label{
+  font-weight: normal;
+  line-height: 34px;
+  margin: 0;
+  cursor: pointer;
+}
+
+.y-theme-choose-list li input{
+  cursor: pointer;
+  margin-right: 5px;
+}
+
+.y-traveller-info-list li,
+.y-order-confirm-list li,
+.y-people-count-list li{
+  float: left;
+  margin-right: 20px;
+}
+
+.y-traveller-info-list label,
+.y-order-confirm-list label,
+.y-people-count-list label{
+  font-weight: normal;
+  line-height: 34px;
+  margin: 0;
+  cursor: pointer;
+}
+
+.y-traveller-info-list input,
+.y-order-confirm-list input,
+.y-people-count-list input{
+  cursor: pointer;
+  margin-right: 5px;
+}
+
+.y-system-chargeback-list{
+  width: 900px;
+}
+
+.y-system-chargeback-list li{
+  margin-bottom: 5px;
+}
+
+.y-system-chargeback-list li:after{
+  content: "";
+  clear: both;
+  display: block;
+  visibility: hidden;
+}
+
+.y-system-chargeback-list li input[type=checkbox]{
+  float: left;
+  margin-top: 5px;
+  cursor: pointer;
+  color: #999;
+}
+
+.y-system-chargeback-list li input[type=checkbox].active{
+  color: #666;
+}
+
+.y-system-chargeback-list li span{
+  line-height: 25px;
+  float: left;
+  margin: 0 10px;
+  color: #999;
+}
+
+.y-system-chargeback-list li span.active{
+  color: #666;
+}
+
+.y-system-chargeback-list li input[type=text]{
+  width: 60px;
+  text-align: center;
+  float: left;
+  font-size: 12px;
+  padding: 3px 6px;
+  height: auto;
+  color: #999;
+}
+
+.y-system-chargeback-list li input[type=text].active{
+  color: #666;
+}
+
+.j-system-chargeback{
+  display: none;
+}
+
+.j-system-chargeback .msg-t{
+  font-size: 12px;
+  color: #999;
+  margin-bottom: 10px !important;
+}
+
+.j-free-people-count{
+  clear: both;
+  font-size: 12px;
+  color: #999;
+  display: none;
+}
+
+.y-find-city-list{
+  position: absolute;
+  padding: 10px;
+  border: 1px solid #dddfe1;
+  background: #fff;
+  z-index: 1;
+  width: 200px;
+  display: none;
+}
+
+.y-find-city-list input{
+  padding: 5px 9px;
+  height: auto;
+  font-size: 12px;
+  color: #999;
+}
+
+.y-find-city-list ul{
+  padding-top: 10px;
+}
+
+.y-find-city-list li{
+  line-height: 22px;
+  font-size: 14px;
+  color: #999;
+}
+
+.y-find-city-list li:hover{
+  background: #eee;
+}
+
+.y-find-city-list li a{
+  float: right;
+  line-height: 22px;
+  color: #999;
+}
+
+.y-hotel-service li{
+  float: left;
+  width: 33.3333333333%;
+}
+
+.y-hotel-service label{
+  line-height: 34px;
+  font-weight: normal;
+  font-size: 16px;
+}
+
+.y-hotel-service label input{
+  margin-right: 5px;
+}
+
+
+textarea.y-middle-far-bag{
+  width: 100%;
+  height: 100px;
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+.y-product-make-intro li{
+  width: 25%;
+  float: left;
+  margin-right: 0;
+  padding-right: 15px !important;
+}
+
+.y-product-make-intro li strong{
+  height: 120px;
+  display: block !important;
+}
+
+.y-product-make-intro li strong img{
+  width: 100%;
+  height: 120px;
+}
+
+.y-product-make-intro li .y-intro{
+  padding: 5px 3px;
+  border: 1px solid #dddfe1;
+  text-align: justify;
+  height: 90px;
+  overflow-y: auto;
+}
+
+.y-product-package-nav-list{
+  margin-bottom: 30px;
+}
+
+.y-product-package-nav-list li{
+  float: left;
+  margin-right: 10px;
+}
+
+.y-product-package-nav-list li a{
+  display: block;
+  padding: 0 10px;
+  text-align: center;
+  line-height: 30px;
+  font-size: 20px;
+  color: #666;
+  background: #dddfe1;
+  border-radius: 4px;
+  position: relative;
+}
+
+.y-product-package-nav-list li a:hover{
+  text-decoration: none;
+}
+
+.y-product-package-nav-list li a.active{
+  background-color: rgb(253, 157, 53);
+  color: #fff;
+}
+
+.y-product-package-nav-list li a.active:after{
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  margin-left: -5px;
+  border: 5px solid transparent;
+  border-top: 5px solid rgb(253, 157, 53);
+}
+
+.y-product-make-send-package-list{
+  float: left;
+}
+
+.y-product-make-send-package-list li{
+  margin-bottom: 10px;
+}
+
+.y-product-make-send-package-list input[type=checkbox]{
+  float: left;
+  width: 15px;
+  height: 15px;
+  margin-top: 9px;
+  margin-right: 10px;
+}
+
+.y-product-make-send-package-list input.y-normal{
+  float: left;
+  margin-right: 10px;
+  width: 135px;
+}
+
+.y-main-product-option-list{
+  padding-left: 30px;
+  margin-top: 15px;
+}
+
+.y-main-product-option-list >li{
+  margin-bottom: 10px;
+}
+
+.y-main-product-option-list .head{
+  margin-bottom: 10px;
+}
+
+.y-main-product-option-list .head label.choose{
+  position: relative;
+  font-weight: normal;
+  font-size: 16px;
+  float: left;
+  margin: 0;
+  margin-right: 30px;
+  line-height: 30px;
+  cursor: pointer;
+}
+
+.y-main-product-option-list .head label.choose input{
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  top: 50%;
+  margin-top: -8px;
+  left: -20px;
+  cursor: pointer;
+}
+
+.y-main-product-option-list .head a{
+  float: left;
+  margin-right: 20px;
+  position: relative;
+  background: #ccc;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 4px;
+  display: none;
+}
+
+.y-main-product-option-list .head a:hover{
+  text-decoration: none;
+}
+
+.y-main-product-option-list .head a.active{
+  background: #28af63;
+}
+
+.y-answer-the-question-list li{
+  background: #28af63;
+  position: relative;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.y-answer-the-question-list li span.j-close{
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  width: 20px;
+  height: 20px;
+  font-size: 24px;
+  line-height: 20px;
+  text-align: center;
+  background: #cc0000;
+  color: #fff;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.y-answer-the-question-list li strong{
+  float: left;
+  color: #fff;
+}
+
+.y-answer-the-question-list li p{
+  margin-left: 30px;
+  color: #fff;
+  margin-bottom: 0;
+}
+
+.y-journey-plan-edition{
+  border: 2px solid #3c9662;
+  padding: 0 10px;
+  padding-bottom: 10px;
+}
+
+.y-journey-plan-edition >.head{
+  background: #3c9662;
+  padding: 3px 15px;
+  border-radius: 5px;
+  margin-top: -2px;
+  margin-bottom: -2px;
+  margin-left: -15px;
+  margin-right: -15px;
+}
+
+.y-journey-edit-body >li{
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin: 15px 0;
+}
+
+.y-journey-edit-body table.head{
+  width: 100%;
+}
+
+.y-journey-edit-body table.head td{
+  color: #666;
+  padding: 6px 0;
+}
+
+.y-journey-edit-body table.head td span{
+  color: #999;
+}
+
+.y-journey-edit-body .content{
+  margin-top: 10px;
+}
+
+.y-journey-edit-body .content >span{
+  float: left;
+  line-height: 26px;
+}
+
+.y-journey-edit-body .content >p{
+  margin-left: 42px;
+  line-height: 26px;
+  color: #999;
+}
+
+.y-journey-edit-body .option{
+  padding-top: 10px;
+  border-top: 1px solid #ccc;
+}
+
+.y-journey-edit-choose >button span.glyphicon{
+  margin-right: 10px;
+}
+
+.y-journey-edit-choose ul.dropdown-menu{
+  border: none;
+  background-color: transparent;
+  padding: 0;
+  box-shadow: none;
+}
+
+.y-journey-edit-choose ul.dropdown-menu li{
+  margin-bottom: 5px;
+}
+
+.y-journey-edit-choose ul.dropdown-menu li span{
+  margin-right: 10px;
+}
+
+.y-journey-edit-choose ul.dropdown-menu li a{
+  color: #fff;
+}
+
+.y-journey-edit-choose ul.dropdown-menu li a:hover{
+  color: #fff;
+  background-color: #279ff2;
+}

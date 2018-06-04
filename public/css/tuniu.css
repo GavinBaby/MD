@@ -1,0 +1,247 @@
+@charset "utf-8";
+/* CSS Document */
+.center_area{
+	width:100%;
+	height:500px; 
+	margin:0 auto;
+}
+
+
+/*中间区域*/
+.center_area .center{
+	width:100%;
+	height:500px;
+	background:#ccc;
+	float: left;
+}
+.common_da{}
+.center_area .center .center_top{
+	width:100%;
+	height:440px;
+	/*background: orange;*/
+}
+/*<==================================================>*/
+
+/*中间轮播图区域*/
+ 
+.content_middle{
+	height:440px;
+    margin:0px auto;
+    position:relative;
+    border: 1px solid #ccc;
+}
+.content_middle:hover .common{
+	display: block;
+}
+/*左右切换图标*/
+.content_middle .common{
+	display: block;
+	width:70px;
+	height: 48px;
+	position: absolute;
+	z-index: 25;
+    top:58%;
+    margin-top: -50px;
+	margin-left: 20px;
+    display: none;
+}
+.content_middle .btnLeft{
+	opacity: 0.5;
+	left:0px;
+	background: url(../icon/btnLeft.png) no-repeat;
+}
+.content_middle .btnRight{
+	opacity: 0.5;
+	right:0px; 
+	background: url(../icon/btnRight.png) no-repeat;
+}
+/*左右切换图标*/
+.content_middle ul li{
+	width: 1440px;;
+	height:600px;
+	opacity: 0;
+	filter: alpha(opacity=0);
+	position: absolute;
+	margin:0px auto;
+}
+
+/*切换小图标*/
+
+.content_middle .table{
+	width:740px; 
+	height:33px;
+	position: absolute;
+	bottom:10px;
+	left:50%;
+	z-index:9;
+	margin-left:-355px;  
+	line-height: 24px; 
+}
+.content_middle .table a{
+    width:115px;
+    height:33px;  
+    background:#E3DEE1;
+    opacity: 0.8;
+    text-align:center;
+    line-height: 33px;
+    margin-left:3px; 
+    display: block;
+    float:left;  
+}
+
+.content_middle .table a.small_active{
+	background:#FF8800;
+	color: #fff;
+	 
+}
+/*滚动条*/
+#scroll-1::-webkit-scrollbar-button,#scroll-2::-webkit-scrollbar-button    {
+	display:none;
+}
+#scroll-1::-webkit-scrollbar-track,#scroll-2::-webkit-scrollbar-track     {
+	display:none;
+}
+#scroll-1::-webkit-scrollbar-track-piece,#scroll-2::-webkit-scrollbar-track-piece {
+	width: 1px;
+}
+#scroll-1::-webkit-scrollbar-corner,#scroll-2::-webkit-scrollbar-corner {
+	background:#82AFFF;
+}
+#scroll-1::-webkit-scrollbar{
+	background:url(../icon/scrollbar.png) center no-repeat;
+	width:8px;
+}
+#scroll-1::-webkit-scrollbar-thumb{
+	width: 8px;;
+	background:#ffb13b;
+	border-radius:4px;
+}
+#scroll-2::-webkit-scrollbar{
+	background:url(../icon/scrollbar2.png) center no-repeat;
+	width:8px;
+}
+#scroll-2::-webkit-scrollbar-thumb{
+	width: 8px;;
+	background:#31bd80;
+	border-radius:3px;
+}
+
+*{
+	font-family:'微软雅黑';
+}
+button{
+	cursor:pointer;
+}
+/*导航按钮*/
+.Navigation{
+	width: 92px;
+	height: 32px;
+	background: white;
+	color: #333333;
+	margin-top: 26px;
+	border-radius: 4px;
+	line-height:32px;
+	text-align: center;
+	cursor:pointer;
+	font-size: 16px;
+	float: left;
+	margin-top: 26px;
+}
+.Navigation:hover{
+	background: #ed7100;
+	color: white;
+}
+/*APP*/
+.app{
+	float: right;
+	cursor:pointer;
+	width: 110px;
+	margin-top: 26px;
+	border-radius: 4px;
+	height: 32px;
+	color: #ed7100;
+	margin-top: 26px;
+}
+.app:hover{
+	background: #f4f4f4;
+}
+#share a{
+	width: 45px;
+	height: 45px;
+	padding: 0px;
+	margin: 6px;
+}
+#share a.bds_weixin{
+	background: url(../icon/wechat.png) no-repeat;
+}
+#share a.bds_tsina{
+	background: url(../icon/weibo.png) no-repeat;
+}
+#share a.bds_fbook{
+	background: url(../icon/facebook.png) no-repeat;
+}
+#share a.bds_twi{
+	background: url(../icon/twitter.png) no-repeat;
+}
+/*轮播*/
+body, html, div, blockquote, img, label, p, h1, h2, h3, h4, h5, h6, pre, ul, ol,
+li, dl, dt, dd, form, a, fieldset, input, th, td
+{margin: 0; padding: 0; border: 0; outline: none;list-style-type: none;overflow-x:none  }
+body{line-height: 1;font-size: 88% ;font-family: "微软雅黑"}
+h1, h2, h3, h4, h5, h6{font-size: 100%; margin: 0 ;font-weight: 400;padding:0;}
+ul, ol{list-style: none;}
+a{color:#333333;text-decoration: none;}
+
+/*黄点*/
+.Ypoint div{
+	height: 10px;
+	width: 10px;
+	background: #cccccc;
+	border-radius: 5px;
+	float: left;
+}
+/*黄钮*/
+.Ybut div{
+	height: 24px;
+	width: 24px;
+	background: white;
+	border-radius: 4px;
+	float: left;
+	border: 1px solid #b2b2b2;
+	cursor: pointer;
+}
+.Ybut div:hover {
+	background: #fd8200;
+	border: 1px solid #fd8200;
+}
+/*黄钮*/
+.AYbut{
+	height: 32px;
+	width: 37px;
+	background: white;
+	float: left;
+	border: 1px solid #b2b2b2;
+	color: #999999;
+	line-height: 32px;
+	text-align: center;
+	cursor: pointer;
+}
+.AYbut:hover {
+	background: #fd8200;
+	border: 1px solid #fd8200;
+}
+.listBut{
+	height: 40px;
+	float: left;
+	color: #333333;
+	font-size: 16px;
+	background: #eeeeee;
+	border-radius: 4px;
+	text-align: center;
+	line-height: 40px;
+	cursor: pointer;
+}
+.listBut:hover{
+	color: white;
+	background: #31bd80;
+}

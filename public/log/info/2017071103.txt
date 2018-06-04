@@ -1,0 +1,2 @@
+[2017-07-11 03:05:36.640] [INFO] logInfo - ::ffff:127.0.0.1 -  GET /water_property 304 
+[2017-07-11 03:05:36.655] [INFO] logInfo - ::ffff:127.0.0.1 -  GET /images/sousuo.png 304 

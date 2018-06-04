@@ -1,0 +1,17 @@
+[2017-07-09 20:50:19.189] [INFO] logInfo - ::ffff:127.0.0.1 -  GET /roles 304 
+[2017-07-09 20:50:19.203] [INFO] logInfo - ::ffff:127.0.0.1 -  GET /js/src/jquery.tree.css 304 
+[2017-07-09 20:50:19.206] [INFO] logInfo - ::ffff:127.0.0.1 -  GET /js/src/jquery.tree.js?_=1499592643429 200 
+[2017-07-09 20:50:19.212] [INFO] logInfo - ::ffff:127.0.0.1 -  GET /js/table-ajax-jsonp.js?_=1499592643430 200 
+[2017-07-09 20:50:19.218] [INFO] logInfo - ::ffff:127.0.0.1 -  GET /js/Backstage/roles.js?_=1499592643431 200 
+[2017-07-09 20:50:22.616] [INFO] logInfo - ::ffff:127.0.0.1 -  GET /roles 304 
+[2017-07-09 20:50:22.632] [INFO] logInfo - ::ffff:127.0.0.1 -  GET /js/src/jquery.tree.css 304 
+[2017-07-09 20:50:22.636] [INFO] logInfo - ::ffff:127.0.0.1 -  GET /js/src/jquery.tree.js?_=1499592643435 200 
+[2017-07-09 20:50:22.644] [INFO] logInfo - ::ffff:127.0.0.1 -  GET /js/table-ajax-jsonp.js?_=1499592643436 200 
+[2017-07-09 20:50:22.653] [INFO] logInfo - ::ffff:127.0.0.1 -  GET /js/Backstage/roles.js?_=1499592643437 200 
+[2017-07-09 20:50:39.066] [INFO] logInfo - ::ffff:127.0.0.1 -  GET /roles 304 
+[2017-07-09 20:50:39.093] [INFO] logInfo - ::ffff:127.0.0.1 -  GET /js/src/jquery.tree.css 304 
+[2017-07-09 20:50:39.095] [INFO] logInfo - ::ffff:127.0.0.1 -  GET /js/src/jquery.tree.js?_=1499592643442 200 
+[2017-07-09 20:50:39.103] [INFO] logInfo - ::ffff:127.0.0.1 -  GET /js/table-ajax-jsonp.js?_=1499592643443 200 
+[2017-07-09 20:50:39.109] [INFO] logInfo - ::ffff:127.0.0.1 -  GET /js/Backstage/roles.js?_=1499592643444 200 
+[2017-07-09 20:50:47.927] [INFO] logInfo - ::ffff:127.0.0.1 -  GET /staff_parameter 304 
+[2017-07-09 20:50:47.940] [INFO] logInfo - ::ffff:127.0.0.1 -  GET /js/Backstage/staff_parameter.js?_=1499592643447 200 

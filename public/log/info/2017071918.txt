@@ -1,0 +1,10 @@
+[2017-07-19 18:27:20.636] [INFO] logInfo - ::ffff:127.0.0.1 -  GET /logout 304 
+[2017-07-19 18:27:20.679] [INFO] logInfo - ::ffff:127.0.0.1 -  GET /css/depei.css 304 
+[2017-07-19 18:27:20.679] [INFO] logInfo - ::ffff:127.0.0.1 -  GET /css/imgValidate.css 304 
+[2017-07-19 18:27:20.682] [INFO] logInfo - ::ffff:127.0.0.1 -  GET /js/jquery-2.1.4.min.js 304 
+[2017-07-19 18:27:20.682] [INFO] logInfo - ::ffff:127.0.0.1 -  GET /js/imgValidate.js 304 
+[2017-07-19 18:27:20.711] [INFO] logInfo - ::ffff:127.0.0.1 -  GET /images/jcsw/background.jpg 304 
+[2017-07-19 18:27:20.711] [INFO] logInfo - ::ffff:127.0.0.1 -  GET /images/user.png 304 
+[2017-07-19 18:27:20.713] [INFO] logInfo - ::ffff:127.0.0.1 -  GET /images/password.png 304 
+[2017-07-19 18:27:22.882] [INFO] logInfo - ::ffff:127.0.0.1 -  GET /css/depei.css 304 
+[2017-07-19 18:27:22.884] [INFO] logInfo - ::ffff:127.0.0.1 -  GET /css/imgValidate.css 304 

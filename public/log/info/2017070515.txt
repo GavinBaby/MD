@@ -1,0 +1,8 @@
+[2017-07-05 15:03:31.105] [INFO] logInfo - ::ffff:127.0.0.1 -  GET /build_manage 304 
+[2017-07-05 15:03:31.115] [INFO] logInfo - ::ffff:127.0.0.1 -  GET /js/table-ajax.js?_=1499235812592 200 
+[2017-07-05 15:03:31.119] [INFO] logInfo - ::ffff:127.0.0.1 -  GET /js/Backstage/build_manage.js?_=1499235812593 200 
+[2017-07-05 15:03:31.203] [INFO] logInfo - ::ffff:127.0.0.1 -  GET /Build/list?p_id=&areaname=&state=&sEcho=1&recordStart=0&pageSize=10&sortName=name&sortType=asc 304 
+[2017-07-05 15:03:35.172] [INFO] logInfo - ::ffff:127.0.0.1 -  GET /build_manage 304 
+[2017-07-05 15:03:35.180] [INFO] logInfo - ::ffff:127.0.0.1 -  GET /js/table-ajax.js?_=1499235812595 200 
+[2017-07-05 15:03:35.183] [INFO] logInfo - ::ffff:127.0.0.1 -  GET /js/Backstage/build_manage.js?_=1499235812596 200 
+[2017-07-05 15:03:35.255] [INFO] logInfo - ::ffff:127.0.0.1 -  GET /Build/list?p_id=&areaname=&state=&sEcho=1&recordStart=0&pageSize=10&sortName=name&sortType=asc 304 

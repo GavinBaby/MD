@@ -1,0 +1,736 @@
+<div id="product_add_page">
+    <link rel="stylesheet" href="/js/searchableSelect/jquery.searchableSelect.css">
+    <!--start-->
+    <ol class="breadcrumb">
+        <div style="text-align: center;font-size: 16px;font-weight:bold;">入库单</div>
+    </ol>
+    <div class="main-box main-box-noborder overflow-hidden" style="padding-top: 12px;padding-left: 20px;">
+        <form class="form-horizontal" action="" method="post"   id="case_add_form">
+            <style>
+                .div_row{
+                    line-height: 50px;height: 50px;
+                }
+                .div_row label{
+                    float: left;
+                    display: inline-block;
+                    text-align: right;
+                    margin-right: 5px;
+                }
+                .div_wrapper{
+                    overflow: hidden;
+                    margin-bottom: 8px;
+                }
+                .div_wrapper input,.div_wrapper select{
+                    box-sizing: border-box;
+                    border: 1px solid #dfdfdf;
+                    width: 100%;
+                    height: 34px;
+                    outline: medium;
+                }
+                .div_wrappercd{
+                    margin-bottom: 8px;
+                    width:auto;
+                }
+                .div_wrappercd .searchable-select{
+                    width: 100%;
+                    height: 34px;
+                    outline: medium;
+                }
+                .cd_input1{
+                    border-left-width:0px;border-top-width:0px;border-right-width:0px;border-bottom-color:black!important;
+                }
+            </style>
+            <div class="form-group">
+                <div class="div_row" style="width: 20%;float: left;">
+                    <label style="font-size: 14px;color: #666666;padding-left: 14px">仓库：</label>
+                    <div class="div_wrappercd " id="search-form" style=" margin-left: 85px;">
+                        <select name="ck_id" id="ck_id" class="cs_change">
+                            <option value="">请选择</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="div_row" style="width: 20%;float: left">
+                    <span id="ck_id_show"></span>
+                </div>
+                <div class="div_row" style="width: 20%;float: left ;">
+                </div>
+                <div class="div_row" style="width: 20%;float: left ;">
+                </div>
+                <div class="div_row" style="width: 20%;float: left ;">
+                    <label style="font-size: 14px;color: #666666;padding-left: 14px">制单人：</label>
+                    <div class="div_wrapper" >
+                        <input class="form-control" style="border-left-width:0px;border-top-width:0px;border-right-width:0px;border-bottom-color:black;" name="name_q" id="name_q" value="CD" readonly>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="div_row" style="width: 20%;float: left;">
+                    <label style="font-size: 14px;color: #666666;padding-left: 14px">入库日期：</label>
+                    <div class="div_wrapper">
+                        <input class="form-control datepicker" style="border-left-width:0px;border-top-width:0px;border-right-width:0px;border-bottom-color:black;" name="in_time" id="in_time" value="">
+                    </div>
+                </div>
+                <div class="div_row" style="width: 20%;float: left">
+                    <label style="font-size: 14px;color: #666666;padding-left: 14px">收货单号：</label>
+                    <div class="div_wrapper">
+                        <input class="form-control" style="border-left-width:0px;border-top-width:0px;border-right-width:0px;border-bottom-color:black;" name="get_code" id="get_code" value="">
+                    </div>
+                </div>
+                <div class="div_row" style="width: 20%;float: left ;">
+                    <label style="font-size: 14px;color: #666666;padding-left: 14px">发票号码：</label>
+                    <div class="div_wrapper">
+                        <input class="form-control" style="border-left-width:0px;border-top-width:0px;border-right-width:0px;border-bottom-color:black;" name="fp_code" id="fp_code" value="">
+                    </div>
+                </div>
+                <div class="div_row" style="width: 20%;float: left ;">
+                    <label style="font-size: 14px;color: #666666;padding-left: 14px">发票日期：</label>
+                    <div class="div_wrapper">
+                        <input class="form-control datepicker" style="border-left-width:0px;border-top-width:0px;border-right-width:0px;border-bottom-color:black;" name="fp_time" id="fp_time" value="">
+                    </div>
+                </div>
+                <div class="div_row" style="width: 20%;float: left ;">
+                    <label style="font-size: 14px;color: #666666;padding-left: 14px">入库记录单号：</label>
+                    <div class="div_wrapper" >
+                        <input class="form-control" style="border-left-width:0px;border-top-width:0px;border-right-width:0px;border-bottom-color:black;" name="in_code" id="in_code" value="" readonly>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="div_row" style="width: 20%;float: left;">
+                    <label style="font-size: 14px;color: #666666;padding-left: 14px">供应商：</label>
+                    <div class="div_wrappercd " id="search-form2" style=" margin-left: 85px;">
+                        <select name="supplier_id" id="supplier_id" class="cs_change">
+                            <option value="">请选择</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="div_row" style="width: 20%;float: left">
+                    <label style="font-size: 14px;color: #666666;padding-left: 14px" id="supplier_id_show"></label>
+                </div>
+                <div class="div_row" style="width: 20%;float: left ;">
+                </div>
+                <div class="div_row" style="width: 20%;float: left ;">
+                    <label style="font-size: 14px;color: #666666;padding-left: 14px">货单号码：</label>
+                    <div class="div_wrapper">
+                        <input class="form-control" style="border-left-width:0px;border-top-width:0px;border-right-width:0px;border-bottom-color:black;" name="hd_code" id="hd_code" value="">
+                    </div>
+                </div>
+                <div class="div_row" style="width: 20%;float: left ;">
+                    <label style="font-size: 14px;color: #666666;padding-left: 14px">应收款记录号：</label>
+                    <div class="div_wrapper" >
+                        <input class="form-control" style="border-left-width:0px;border-top-width:0px;border-right-width:0px;border-bottom-color:black;" name="ysk_code" id="ysk_code" value="" >
+                    </div>
+                </div>
+            </div>
+            <div class="form-group" >
+                <table class="table-style-1 table-style-1-a table-hover mb-0-5" id="area_Table">
+                    <thead>
+                    <tr class="sch">
+                        <td style="width: 7%;" align="center">
+                            <div class="t text-left" >商品编号
+                                <span class="sort-ico" style="padding-top:10px;"><i class="dot-top icon-caret-up"></i><i class="dot-bottom icon-caret-down"></i></span>
+                            </div>
+                        </td>
+                        <td style="width: 7%;" align="center">
+                            <div class="t">商品名称<span class="sort-ico" style="padding-top:10px;"><i class="dot-top icon-caret-up"></i><i class="dot-bottom icon-caret-down"></i></span></div>
+                        </td>
+                        <td style="width: 7%;" align="center">
+                            <div class="t">条形码<span class="sort-ico" style="padding-top:10px;"><i class="dot-top icon-caret-up"></i><i class="dot-bottom icon-caret-down"></i></span></div>
+                        </td>
+                        <td style="width: 7%;" align="center">
+                            <div class="t">规格<span class="sort-ico" style="padding-top:10px;"><i class="dot-top icon-caret-up"></i><i class="dot-bottom icon-caret-down"></i></span></div>
+                        </td>
+                        <!--                    <td style="width: 8%;" align="center">
+                                                <div class="t">促销厂家<span class="sort-ico" style="padding-top:10px;"><i class="dot-top icon-caret-up"></i><i class="dot-bottom icon-caret-down"></i></span></div>
+                                            </td>
+                                            <td style="width: 8%;" align="center">
+                                                <div class="t">促销对象<span class="sort-ico" style="padding-top:10px;"><i class="dot-top icon-caret-up"></i><i class="dot-bottom icon-caret-down"></i></span></div>
+                                            </td>-->
+                        <td style="width: 7%;" align="center">
+                            <div class="t">整数<span class="sort-ico" style="padding-top:10px;"><i class="dot-top icon-caret-up"></i><i class="dot-bottom icon-caret-down"></i></span></div>
+                        </td>
+                        <td style="width: 7%;" align="center">
+                            <div class="t">零数<span class="sort-ico" style="padding-top:10px;"><i class="dot-top icon-caret-up"></i><i class="dot-bottom icon-caret-down"></i></span></div>
+                        </td>
+                        <td style="width: 7%;" align="center">
+                            <div class="t">数量<span class="sort-ico" style="padding-top:10px;"><i class="dot-top icon-caret-up"></i><i class="dot-bottom icon-caret-down"></i></span></div>
+                        </td>
+                        <td style="width: 7%;" align="center">
+                            <div class="t">税率<span class="sort-ico" style="padding-top:10px;"><i class="dot-top icon-caret-up"></i><i class="dot-bottom icon-caret-down"></i></span></div>
+                        </td>
+                        <td style="width: 7%;" align="center">
+                            <div class="t">不含税价<span class="sort-ico" style="padding-top:10px;"><i class="dot-top icon-caret-up"></i><i class="dot-bottom icon-caret-down"></i></span></div>
+                        </td>
+                        <td style="width: 7%;" align="center">
+                            <div class="t">不含税金额<span class="sort-ico" style="padding-top:10px;"><i class="dot-top icon-caret-up"></i><i class="dot-bottom icon-caret-down"></i></span></div>
+                        </td>
+                        <td style="width: 7%;" align="center">
+                            <div class="t">含税单价<span class="sort-ico" style="padding-top:10px;"><i class="dot-top icon-caret-up"></i><i class="dot-bottom icon-caret-down"></i></span></div>
+                        </td>
+                        <td style="width: 7%;" align="center">
+                            <div class="t">含税金额<span class="sort-ico" style="padding-top:10px;"><i class="dot-top icon-caret-up"></i><i class="dot-bottom icon-caret-down"></i></span></div>
+                        </td>
+                        <td style="width: 7%;" align="center">
+                            <div class="t">备注</div>
+                        </td>
+                        <td style="width: 7%;" align="center">
+                            <div class="t">库存</div>
+                        </td>
+                    </tr>
+                    </thead>
+                    <tbody id="product_list">
+                    <tr role="row" class="odd product_list" id="product_list1">
+                        <td>
+                            <div class="div_wrappercd  pro_div" style="margin-top: 8px;">
+                                <select  class="pro_id">
+                                    <option value="">请选择</option>
+                                </select>
+                            </div>
+                        </td>
+                        <td><input class="form-control name_cn" value="" autocomplete="off" name="name_cn" ></td>
+                        <td><input class="form-control barcode" value="" autocomplete="off" name="barcode" ></td>
+                        <td><input class="form-control gg" value="" autocomplete="off" name="gg" ></td>
+                        <td><input class="form-control zs" value="" autocomplete="off" name="zs" ></td>
+                        <td><input class="form-control ls" value="" autocomplete="off" name="ls" ></td>
+                        <td><input class="form-control num" value="" autocomplete="off" name="num" readonly></td>
+                        <td><input class="form-control rate" value="" autocomplete="off" name="rate" readonly></td>
+                        <td><input class="form-control bhsj" value="" autocomplete="off" name="bhsj" readonly></td>
+                        <td><input class="form-control bhsje" value="" autocomplete="off" name="bhsje" readonly></td>
+                        <td><input class="form-control hsdj" value="" autocomplete="off" name="hsdj" readonly></td>
+                        <td><input class="form-control hsje" value="" autocomplete="off" name="hsje" readonly></td>
+                        <td><input class="form-control remark" value="" autocomplete="off" name="remark" ></td>
+                        <td><input class="form-control kc" value="" autocomplete="off" name="kc" readonly></td>
+                    </tr>
+
+                    <tr role="row" class="odd" style="background-color: greenyellow">
+                        <td><div style="text-align: center;">总计</div></td>
+                        <td><div style="text-align: center;" id="all_hs">共1行</div></td>
+                        <td><div style="text-align: center;"></div></td>
+                        <td><div style="text-align: center;"></div></td>
+                        <td><div style="text-align: center;" id="all_zs">0</div></td>
+                        <td><div style="text-align: center;" id="all_ls">0</div></td>
+                        <td><div style="text-align: center;" id="all_num">0</div></td>
+                        <td><div style="text-align: center;"></div></td>
+                        <td><div style="text-align: center;"></div></td>
+                        <td><div style="text-align: center;" id="all_bhsje">0</div></td>
+                        <td><div style="text-align: center;"></div></td>
+                        <td><div style="text-align: center;" id="all_hsje">0</div></td>
+                        <td><div style="text-align: center;"></div></td>
+                        <td><div style="text-align: center;"></div></td>
+                    </tr>
+
+                    </tbody>
+                </table>
+                <nav class="pagination-wrap clearfix">
+                    <div class="ml-2 mt-1 mb-2">
+                        <a class="form-btn-upload" id="addStaffModal" data-toggle="modal"><i class="icon-plus-sign"></i>添加</a>
+                    </div>
+                </nav>
+            </div>
+            <div class="modal-footer pb-2" style="text-align: center;">
+                <button type="button" class="btn btn-default btn-default-green w-14 font-16 float-none" data-dismiss="modal" id="add_account_cancel">取消</button>
+                <button id="save_product" type="button" class="btn btn-success w-14 font-16 float-none ml-2" >保存</button>
+            </div>
+        </form>
+        <nav class="pagination-wrap clearfix" style="height: 20px;margin-top:-22px">
+        </nav>
+    </div>
+    <script type="text/javascript" src="/js/searchableSelect/jquery.searchableSelect.js"></script>
+    <script>
+        $(function(){
+            var proposals = [];
+            var proposals2 = [];
+            var proposals3 = [];
+            var product = [];//商品
+            var v_103 =[];//仓库
+            var suppliers =[];//供应商
+            var supplier_id;
+            $("#product_add_page").unbind();
+            $("#product_add_page").on('click','.searchable-select-holder',function(){
+            });
+            //初始化
+            $.ajax({
+                type: "get",
+                url: '/base/dic',
+                dataType: "json",
+                data: {},
+                async:false,
+                success: function (data) {
+                    if(data.data&&data.data.length){
+                        for(var i=0;i<data.data.length;i++){
+                            if(data.data[i].diccode==103){
+                                v_103.push(data.data[i]);
+                                $("#ck_id").append('<option value="'+data.data[i].code+'">'+data.data[i].value+'</option>');
+                            }
+                        }
+                        $('#ck_id').searchableSelect();
+                        $("#search-form").bind('DOMNodeInserted', function(e) {
+                            //有延迟
+                            setTimeout(function(){
+                                //alert($('#ck_id').val());
+                            },200);
+                        });
+                    }
+                },
+                error: function (data) {
+                    alert("系统错误");
+                }
+            });
+
+            //初始化
+            $.ajax({
+                type: "get",
+                url: '/base/supplier',
+                dataType: "json",
+                data: {},
+                async:false,
+                success: function (data) {
+                    if(data.data&&data.data.length){
+                        for(var i=0;i<data.data.length;i++){
+                            suppliers.push(data.data[i]);
+                            $("#supplier_id").append('<option value="'+data.data[i].code+'">'+data.data[i].code+'</option>');
+                        }
+                        $('#supplier_id').searchableSelect();
+                        $("#search-form2").bind('DOMNodeInserted', function(e) {
+                            //有延迟
+                            setTimeout(function(){
+                                $("#supplier_id_show").html("");
+                                for(var i=0;i<suppliers.length;i++){
+                                    if(suppliers[i].code==$('#supplier_id').find("option:selected").text()){
+                                        $("#supplier_id_show").html(suppliers[i].name);
+                                    }
+                                }
+                                if(supplier_id!=$('#supplier_id').find("option:selected").text()){
+                                    pro_div_into()
+                                    supplier_id=$('#supplier_id').find("option:selected").text();
+                                    $("#product_list").find('input').each(function(){
+                                        $(this).val("");
+                                    })
+                                }
+                            },200);
+                        });
+                    }
+                },
+                error: function (data) {
+                    alert("系统错误");
+                }
+            });
+
+            function pro_div_into(){
+                $(".pro_div").find('.searchable-select').remove();
+                //初始化
+                $.ajax({
+                    type: "get",
+                    url: '/base/product',
+                    dataType: "json",
+                    data: {supplier:$("#supplier_id").val(),ck_code:$("#ck_id").val()},
+                    success: function (data) {
+                        $(".pro_id").empty();
+                        $(".pro_id").append('<option value="">请选择</option>');
+                        if(data.data&&data.data.length){
+                            for(var i=0;i<data.data.length;i++){
+                                product.push(data.data[i]);
+                                $(".pro_id").append('<option value="'+data.data[i].code+'">'+data.data[i].code+'</option>');
+                            }
+                        }
+                        $('.pro_id').searchableSelect();
+                        $('.pro_div').each(function(){
+                            var $this =$(this);
+                            $this.bind('DOMNodeInserted', function(e) {
+                                //有延迟
+                                setTimeout(function(){
+                                    for(var i=0;i<product.length;i++){
+                                        if(product[i].code==$this.find('.pro_id').val()){
+                                            $this.closest("tr").find(".name_cn").val(product[i].name_cn);
+                                            $this.closest("tr").find(".barcode").val(product[i].barcode);
+                                            $this.closest("tr").find(".gg").val(product[i].gg);
+                                            $this.closest("tr").find(".zs").val(1);
+                                            $this.closest("tr").find(".ls").val(0);
+                                            $this.closest("tr").find(".num").val(product[i].gg);
+                                            $this.closest("tr").find(".rate").val(product[i].rate);
+                                            $this.closest("tr").find(".hsdj").val(product[i].u_price);
+                                            $this.closest("tr").find(".hsje").val(product[i].price);
+                                            var bhsj_ = (product[i].price*(100-product[i].rate)/100).toFixed(2)
+                                            $this.closest("tr").find(".bhsj").val(bhsj_);
+                                            $this.closest("tr").find(".bhsje").val(bhsj_);
+                                            $this.closest("tr").find(".remark").val(product[i].remark);
+                                            $this.closest("tr").find(".kc").val(product[i].num);
+                                            var all_zs=0;
+                                            $("#product_list").find('.zs').each(function(){
+                                                all_zs+=Number($(this).val());
+                                            })
+                                            $("#all_zs").html(all_zs);
+
+                                            var all_ls=0;
+                                            $("#product_list").find('.ls').each(function(){
+                                                all_ls+=Number($(this).val());
+                                            })
+                                            $("#all_ls").html(all_ls);
+
+                                            var all_num=0;
+                                            $("#product_list").find('.num').each(function(){
+                                                all_num+=Number($(this).val());
+                                            })
+                                            $("#all_num").html(all_num);
+
+                                            var all_bhsje=0;
+                                            $("#product_list").find('.bhsje').each(function(){
+                                                all_bhsje+=Number($(this).val());
+                                            })
+                                            $("#all_bhsje").html(all_bhsje);
+
+                                            var all_hsje=0;
+                                            $("#product_list").find('.hsje').each(function(){
+                                                all_hsje+=Number($(this).val());
+                                            })
+                                            $("#all_hsje").html(all_hsje);
+                                        }
+                                    }
+                                },200);
+                            });
+
+                            $this.closest("tr").find(".zs").keyup(function(e) {
+                                var re = /^[0-9]+$/ ;
+                                if(re.test($(this).val())||$(this).val()==0){
+                                    if(!$this.closest("tr").find(".ls").val()){
+                                        $this.closest("tr").find(".ls").val(0)
+                                    }
+                                    var num_show = Number($this.closest("tr").find(".zs").val()*$this.closest("tr").find(".gg").val())+Number($this.closest("tr").find(".ls").val())
+                                    $this.closest("tr").find(".num").val(num_show);
+
+                                    var all_zs=0;
+                                    $("#product_list").find('.zs').each(function(){
+                                        all_zs+=Number($(this).val());
+                                    })
+                                    $("#all_zs").html(all_zs);
+
+                                    var all_num=0;
+                                    $("#product_list").find('.num').each(function(){
+                                        all_num+=Number($(this).val());
+                                    })
+                                    $("#all_num").html(all_num);
+
+                                    var all_bhsje=0;
+                                    $("#product_list").find('.bhsje').each(function(){
+                                        all_bhsje+=Number($(this).val())*Number($(this).closest("tr").find('.num').val());
+                                    })
+                                    $("#all_bhsje").html(all_bhsje);
+
+                                    var all_hsje=0;
+                                    $("#product_list").find('.hsje').each(function(){
+                                        all_hsje+=Number($(this).val())*Number($(this).closest("tr").find('.num').val());
+                                    })
+                                    $("#all_hsje").html(all_hsje);
+                                }else{
+                                    $(this).val(0)
+                                    alert("请输入正整数");
+                                }
+
+                            });
+                            $this.closest("tr").find(".ls").keyup(function(e) {
+                                var re = /^[0-9]+$/ ;
+                                if(re.test($(this).val())){
+                                    if(!$this.closest("tr").find(".num").val()){
+                                        $this.closest("tr").find(".num").val(0)
+                                    }
+                                    var num_show = Number($this.closest("tr").find(".zs").val()*$this.closest("tr").find(".gg").val())+Number($this.closest("tr").find(".ls").val())
+                                    $this.closest("tr").find(".num").val(num_show);
+
+                                    var all_ls=0;
+                                    $("#product_list").find('.ls').each(function(){
+                                        all_ls+=Number($(this).val());
+                                    })
+                                    $("#all_ls").html(all_ls);
+
+                                    var all_num=0;
+                                    $("#product_list").find('.num').each(function(){
+                                        all_num+=Number($(this).val());
+                                    })
+                                    $("#all_num").html(all_num);
+
+                                    var all_bhsje=0;
+                                    $("#product_list").find('.bhsje').each(function(){
+                                        all_bhsje+=Number($(this).val())*Number($(this).closest("tr").find('.num').val())/Number($(this).closest("tr").find('.gg').val());
+                                    })
+                                    $("#all_bhsje").html(all_bhsje.toFixed(2));
+
+                                    var all_hsje=0;
+                                    $("#product_list").find('.hsje').each(function(){
+                                        all_hsje+=Number($(this).val())*Number($(this).closest("tr").find('.num').val())/Number($(this).closest("tr").find('.gg').val());
+                                    })
+                                    $("#all_hsje").html(all_hsje.toFixed(2));
+                                }else{
+                                    $(this).val(0)
+                                    alert("请输入正整数");
+                                }
+
+                            });
+
+
+                        });
+                    },
+                    error: function (data) {
+                        alert("系统错误");
+                    }
+                });
+            }
+
+            function pro_div_add(pid){
+               $(pid).find(".pro_div").find('.searchable-select').remove();
+                //初始化
+                $.ajax({
+                    type: "get",
+                    url: '/base/product',
+                    dataType: "json",
+                    data: {supplier:$("#supplier_id").val(),ck_code:$("#ck_id").val()},
+                    success: function (data) {
+                        $(pid).find(".pro_id").empty();
+                        $(pid).find(".pro_id").append('<option value="">请选择</option>');
+                        if(data.data&&data.data.length){
+                            for(var i=0;i<data.data.length;i++){
+                                product.push(data.data[i]);
+                                $(pid).find(".pro_id").append('<option value="'+data.data[i].code+'">'+data.data[i].code+'</option>');
+                            }
+                        }
+                        $(pid).find('.pro_id').searchableSelect();
+                        $(pid).find('.pro_div').each(function(){
+                            var $this =$(this);
+                            $this.bind('DOMNodeInserted', function(e) {
+                                //有延迟
+                                setTimeout(function(){
+                                    for(var i=0;i<product.length;i++){
+                                        if(product[i].code==$this.find('.pro_id').val()){
+                                            $this.closest("tr").find(".name_cn").val(product[i].name_cn);
+                                            $this.closest("tr").find(".barcode").val(product[i].barcode);
+                                            $this.closest("tr").find(".gg").val(product[i].gg);
+                                            $this.closest("tr").find(".zs").val(1);
+                                            $this.closest("tr").find(".ls").val(0);
+                                            $this.closest("tr").find(".num").val(product[i].gg);
+                                            $this.closest("tr").find(".rate").val(product[i].rate);
+
+                                            $this.closest("tr").find(".hsdj").val(product[i].u_price);
+                                            $this.closest("tr").find(".hsje").val(product[i].price);
+
+                                            var bhsj_ = (product[i].price*(100-product[i].rate)/100).toFixed(2)
+                                            $this.closest("tr").find(".bhsj").val(bhsj_);
+                                            $this.closest("tr").find(".bhsje").val(bhsj_);
+
+                                            $this.closest("tr").find(".remark").val(product[i].remark);
+                                            $this.closest("tr").find(".kc").val(product[i].num);
+
+
+                                            var all_zs=0;
+                                            $("#product_list").find('.zs').each(function(){
+                                                all_zs+=Number($(this).val());
+                                            })
+                                            $("#all_zs").html(all_zs);
+
+                                            var all_ls=0;
+                                            $("#product_list").find('.ls').each(function(){
+                                                all_ls+=Number($(this).val());
+                                            })
+                                            $("#all_ls").html(all_ls);
+
+                                            var all_num=0;
+                                            $("#product_list").find('.num').each(function(){
+                                                all_num+=Number($(this).val());
+                                            })
+                                            $("#all_num").html(all_num);
+
+                                            var all_bhsje=0;
+                                            $("#product_list").find('.bhsje').each(function(){
+                                                all_bhsje+=Number($(this).val());
+                                            })
+                                            $("#all_bhsje").html(all_bhsje);
+
+                                            var all_hsje=0;
+                                            $("#product_list").find('.hsje').each(function(){
+                                                all_hsje+=Number($(this).val());
+                                            })
+                                            $("#all_hsje").html(all_hsje);
+                                        }
+                                    }
+                                },200);
+                            });
+                            $this.closest("tr").find(".zs").keyup(function(e) {
+                                var re = /^[0-9]+$/ ;
+                                if(re.test($(this).val())){
+                                    if(!$this.closest("tr").find(".ls").val()){
+                                        $this.closest("tr").find(".ls").val(0)
+                                    }
+                                    var num_show = Number($this.closest("tr").find(".zs").val()*$this.closest("tr").find(".gg").val())+Number($this.closest("tr").find(".ls").val())
+                                    $this.closest("tr").find(".num").val(num_show);
+                                }else{
+                                    $(this).val(0)
+                                    alert("请输入正整数");
+                                }
+                            });
+                            $this.closest("tr").find(".ls").keyup(function(e) {
+                                var re = /^[0-9]+$/ ;
+                                if(re.test($(this).val())){
+                                    if(!$this.closest("tr").find(".num").val()){
+                                        $this.closest("tr").find(".num").val(0)
+                                    }
+                                    var num_show = Number($this.closest("tr").find(".zs").val()*$this.closest("tr").find(".gg").val())+Number($this.closest("tr").find(".ls").val())
+                                    $this.closest("tr").find(".num").val(num_show);
+                                }else{
+                                    $(this).val(0)
+                                    alert("请输入正整数");
+                                }
+                            });
+                        });
+                    },
+                    error: function (data) {
+                        alert("系统错误");
+                    }
+                });
+            }
+            pro_div_into()
+            var list_num=1
+            $("#addStaffModal").on("click",function(){
+                $("#product_list"+list_num).after('<tr role="row" class="odd product_list" id="product_list'+(list_num+1)+'">' +
+                        '<td> ' +
+                        '<div class="div_wrappercd  pro_div" style="margin-top: 8px;"> ' +
+                        '<select  class="pro_id"> ' +
+                        '<option value="">请选择</option> ' +
+                        '</select> ' +
+                        '</div> ' +
+                        '</td> ' +
+                        '<td><input class="form-control name_cn" value="" autocomplete="off" name="name_cn" readonly></td> ' +
+                        '<td><input class="form-control barcode" value="" autocomplete="off" name="barcode" readonly></td> ' +
+                        '<td><input class="form-control gg" value="" autocomplete="off" name="gg" readonly></td> ' +
+                        '<td><input class="form-control zs" value="" autocomplete="off" name="zs" ></td> ' +
+                        '<td><input class="form-control ls" value="" autocomplete="off" name="ls" ></td> ' +
+                        '<td><input class="form-control num" value="" autocomplete="off" name="num" readonly></td> ' +
+                        '<td><input class="form-control rate" value="" autocomplete="off" name="rate" readonly></td> ' +
+                        '<td><input class="form-control bhsj" value="" autocomplete="off" name="bhsj" readonly></td> ' +
+                        '<td><input class="form-control bhsje" value="" autocomplete="off" name="bhsje" readonly></td> ' +
+                        '<td><input class="form-control hsdj" value="" autocomplete="off" name="hsdj" readonly></td> ' +
+                        '<td><input class="form-control hsje" value="" autocomplete="off" name="hsje" readonly></td> ' +
+                        '<td><input class="form-control remark" value="" autocomplete="off" name="remark" ></td> ' +
+                        '<td><input class="form-control kc" value="" autocomplete="off" name="kc" readonly></td> ' +
+                        '</tr>')
+                list_num++;
+                $("#all_hs").html("共"+list_num+"行")
+                pro_div_add("#product_list"+list_num);
+            })
+
+            // 产品保存
+            $("#save_product").on("click",function(){
+                var parms={
+                    main:{
+                        hd_code:$("#hd_code").val(),
+                        ysk_code:$("#ysk_code").val(),
+                        in_code:$("#in_code").val(),
+                        get_code:$("#get_code").val(),
+                        in_time:$("#in_time").val(),
+                        supplier_id:$("#supplier_id").val(),
+                        supplier_name:$('#supplier_id').find("option:selected").text(),
+                        ck_id:$("#ck_id").val(),
+                        ck_code:$("#ck_id").val(),
+                        ck_name:$("#ck_name").find("option:selected").text(),
+                        fp_code:$("#fp_code").val(),
+                        fp_time:$("#fp_time").val()/*
+                        create_man:$("#create_man").val(),
+                        create_time:$("#create_time").val()*/
+
+                    },
+                    detail:[]
+                }
+                for(var i=0;i<v_103.length;i++){
+                    if(v_103[i].code==parms.main.ck_code){
+                        parms.main.ck_id=v_103[i].id
+                    }
+                }
+                $(".product_list").each(function(){
+                    var product_info={
+                        pro_id:$(this).find(".pro_id").val(),
+                        pro_name:$(this).find(".pro_name").val(),
+                        barcode:$(this).find(".barcode").val(),
+                        gg:$(this).find(".gg").val(),
+                        zs:$(this).find(".zs").val(),
+                        num:$(this).find(".num").val(),
+                        rate:$(this).find(".rate").val(),
+                        bhsj:$(this).find(".bhsj").val(),
+                        bhsje:$(this).find(".bhsje").val(),
+                        hsdj:$(this).find(".hsdj").val(),
+                        hsje:$(this).find(".hsje").val(),
+                        remark:$(this).find(".remark").val(),
+                        kc:$(this).find(".kc").val()
+                    }
+                    parms.detail.push(product_info)
+                })
+                var json_ = JSON.stringify(parms);
+                $.ajax({
+                    type: "post",
+                    url: '/buy/inbill',
+                    dataType: "json",
+                    data: {jsonSting:json_},
+                    success: function (data) {
+                        if(data.code==1){
+                            alert("保存成功！")
+                        }else{
+                            alert("保存失败！")
+                        }
+                    },
+                    error: function (data) {
+                        alert("系统错误");
+                    }
+                });
+
+            })
+
+
+
+        })
+
+        //日历控件
+        //var nowTemp = new Date();
+        //var now = new Date(nowTemp.getFullYear(), nowTemp.getMonth(), nowTemp.getDate(), 0, 0, 0, 0);
+
+
+        $('.datepicker').datetimepicker({
+            minView: "month",
+            format: 'yyyy-mm-dd ',
+            language: 'zh-TW',
+            autoclose: true
+        }).data('datetimepicker');
+
+        /*$('.form_datetime').each(function (i, n) {
+            var $date = $(n).find('.datepicker');
+
+            var checkout = $date.eq(1).datetimepicker({
+                minView: "month",
+                format: 'yyyy-mm-dd ',
+                language: 'zh-TW',
+                autoclose: true
+            }).data('datetimepicker');
+
+            var checkin = $date.eq(0).datetimepicker({
+                minView: "month",
+                format: 'yyyy-mm-dd ',
+                language: 'zh-TW',
+                autoclose: true
+            }).on('changeDate', function (ev) {
+                //if (ev.date.valueOf() > checkout.date.valueOf()) {
+                var newDate = new Date(ev.date)
+                newDate.setDate(newDate.getDate());
+                checkout.setDate(newDate);
+                checkout.setStartDate(newDate);
+                //}
+                $date.eq(1).focus();
+            }).data('datetimepicker');
+        });*/
+
+
+
+
+
+
+
+
+    </script>
+    <!--私有js-->
+<!--    <script src="js/backstage/product_add.js"></script>-->
+    <!--end-->
+</div>

@@ -1,0 +1,5 @@
+[2017-06-26 13:51:56.926] [INFO] logInfo - ::ffff:127.0.0.1 -  GET /building_manage 304 
+[2017-06-26 13:59:28.604] [INFO] logInfo - ::ffff:127.0.0.1 -  GET /roles 304 
+[2017-06-26 13:59:28.614] [INFO] logInfo - ::ffff:127.0.0.1 -  GET /js/src/jquery.tree.css 304 
+[2017-06-26 13:59:28.617] [INFO] logInfo - ::ffff:127.0.0.1 -  GET /js/src/jquery.tree.js?_=1498452713293 200 
+[2017-06-26 13:59:28.622] [INFO] logInfo - ::ffff:127.0.0.1 -  GET /js/Backstage/roles.js?_=1498452713294 200 

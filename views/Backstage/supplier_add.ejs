@@ -1,0 +1,208 @@
+<div id="product_add_page">
+    <!--start-->
+    <ol class="breadcrumb">
+        <div style="text-align: center;font-size: 16px;font-weight:bold;">供应商登记</div>
+    </ol>
+    <div class="main-box main-box-noborder overflow-hidden" style="padding-top: 12px;padding-left: 20px;">
+        <form class="form-horizontal" action="" method="post"   id="case_add_form" style="margin-left: 30px;">
+            <div class="form-group">
+                <label class="w-12 control-label" style="font-family: 微软雅黑;font-size: 16px">供应商编号：</label>
+                <div class="w-20 relative ">
+                    <input style="border-left-width:0px;border-top-width:0px;border-right-width:0px;border-bottom-color:black" id="product_name" class="form-control" type="text" name="home_title1" maxlength="12" value="系统自动生成" readonly>
+                </div>
+            </div>
+            <div class="form-group ">
+                <label class="control-label w-12">名称：</label>
+                <div class="w-40">
+                    <input id="name" class="form-control" type="text" name="name"   maxlength="20" value="" >
+                </div>
+            </div>
+            <div class="form-group ">
+                <label class="control-label w-12">类型：</label>
+                <div class="w-40">
+                    <select class="form-control" name="type" id="type" >
+                        <option value="1">类型一</option>
+                        <option value="2">类型二</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-group ">
+                <label class="control-label w-12">地址：</label>
+                <div class="w-40">
+                    <input id="address" class="form-control" type="text" name="address"   maxlength="20" value="" >
+                </div>
+            </div>
+            <div class="form-group ">
+                <label class="control-label w-12">电话号码：</label>
+                <div class="w-40">
+                    <input id="mobile" class="form-control" type="text" name="mobile"   maxlength="20" value="" >
+                </div>
+            </div>
+            <div class="form-group ">
+                <label class="control-label w-12">传真：</label>
+                <div class="w-40">
+                    <input id="fax" class="form-control" type="text" name="fax"   maxlength="20" value="" >
+                </div>
+            </div>
+            <div class="form-group ">
+                <label class="control-label w-12">法人代表：</label>
+                <div class="w-40">
+                    <input id="fr" class="form-control" type="text" name="fr"   maxlength="20" value="" >
+                </div>
+            </div>
+            <div class="form-group ">
+                <label class="control-label w-12">联系人：</label>
+                <div class="w-40">
+                    <input id="lxr" class="form-control" type="text" name="lxr"   maxlength="20" value="" >
+                </div>
+            </div>
+            <div class="form-group ">
+                <label class="control-label w-12">税号：</label>
+                <div class="w-40">
+                    <input id="sh" class="form-control" type="text" name="sh"   maxlength="20" value="" >
+                </div>
+            </div>
+            <div class="form-group ">
+                <label class="control-label w-12">开户行：</label>
+                <div class="w-40">
+                    <input id="bank" class="form-control" type="text" name="bank"   maxlength="20" value="" >
+                </div>
+            </div>
+            <div class="form-group ">
+                <label class="control-label w-12">账号：</label>
+                <div class="w-40">
+                    <input id="account" class="form-control" type="text" name="account"   maxlength="20" value="" >
+                </div>
+            </div>
+        </form>
+        <div class="modal-footer pb-2" style="text-align: center;">
+            <button type="button" class="btn btn-default btn-default-green w-14 font-16 float-none" data-dismiss="modal" id="add_account_cancel">保存</button>
+            <button id="save_product" type="button" class="btn btn-success w-14 font-16 float-none ml-2" >下一步</button>
+        </div>
+        <nav class="pagination-wrap clearfix" style="height: 20px;margin-top:-22px">
+        </nav>
+    </div>
+
+
+    <!-- 添加集中器弹窗 -->
+    <div class="modal modal-noline fade" id="addAreaModal" tabindex="-1" role="dialog" aria-labelledby="addAccountModalLabel" aria-hidden="true">
+        <div class="modal-outer">
+            <div class="modal-middle">
+                <div class="modal-dialog modal-inner float-none" style="width:850px;">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal"></button>
+                        </div>
+                        <div class="modal-body p-1 pt-3">
+                            <div class="form-group">
+                                <div class="form-group" >
+                                    <label class="control-label" style="font-size: 20px;width: 200px;margin: 0px 0px 0 5px;">流程图</label>
+                                </div>
+                            </div>
+                            <form class="form-horizontal " action="" method="post"   id="add_account_form">
+
+
+
+                            </form>
+                            <div class=" pb-2">
+                                <button  style="width:8%;margin-left:1%;margin-right: 1%;line-height: 20px;background-color: greenyellow;" id="init_card" type="button" class="btn   font-12 float-none ml-1 mr-1">活动申请</button>
+                                <img src="/images/card_arrow.jpg" style="width:5%;height: auto;">
+                                <button  style="width:8%;margin-left:1%;margin-right: 1%;line-height: 20px;background-color: greenyellow;" id="init_card" type="button" class="btn   font-12 float-none ml-1 mr-1">主管初审</button>
+                                <img src="/images/card_arrow.jpg" style="width:5%;height: auto;">
+                                <button style="width:8%;margin-left:1%;margin-right: 1%;line-height: 20px;background-color: gold;" id="write_card" type="button" class="btn   font-12 float-none ml-1 mr-1">文员录入</button>
+                                <img src="/images/card_arrow.jpg" style="width:5%;height: auto;">
+                                <button style="width:8%;margin-left:1%;margin-right: 1%;line-height: 20px;" id="write_card" type="button" class="btn   font-12 float-none ml-1 mr-1">跟踪总结</button>
+                                <img src="/images/card_arrow.jpg" style="width:5%;height: auto;">
+                                <button style="width:8%;margin-left:1%;margin-right: 1%;line-height: 20px;" id="write_card" type="button" class="btn   font-12 float-none ml-1 mr-1">主管终审</button>
+                                <img src="/images/card_arrow.jpg" style="width:5%;height: auto;">
+                                <button style="width:8%;margin-left:1%;line-height: 20px;" id="write_card" type="button" class="btn   font-12 float-none ml-1 mr-1">财务终审</button>
+                            </div>
+
+
+                            <div class="form-group"  style="margin-left:5px;">
+                                <table class="table-style-1 table-style-1-a table-hover mb-0-5" id="area_Table">
+                                    <thead>
+                                    <tr class="sch">
+                                        <td style="width: 7%;" align="center">
+                                            <div class="t text-left" >操作时间
+                                                <span class="sort-ico" style="padding-top:10px;"><i class="dot-top icon-caret-up"></i><i class="dot-bottom icon-caret-down"></i></span>
+                                            </div>
+                                        </td>
+                                        <td style="width: 7%;" align="center">
+                                            <div class="t">处理人<span class="sort-ico" style="padding-top:10px;"><i class="dot-top icon-caret-up"></i><i class="dot-bottom icon-caret-down"></i></span></div>
+                                        </td>
+                                        <td style="width: 7%;" align="center">
+                                            <div class="t">环节名称<span class="sort-ico" style="padding-top:10px;"><i class="dot-top icon-caret-up"></i><i class="dot-bottom icon-caret-down"></i></span></div>
+                                        </td>
+                                        <td style="width: 7%;" align="center">
+                                            <div class="t">备注<span class="sort-ico" style="padding-top:10px;"><i class="dot-top icon-caret-up"></i><i class="dot-bottom icon-caret-down"></i></span></div>
+                                        </td>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr role="row" class="odd">
+                                        <td><div style="text-align: center;">2017-10-05</div></td>
+                                        <td><div style="text-align: center;">CD</div></td>
+                                        <td><div style="text-align: center;">活动申请</div></td>
+                                        <td><div style="text-align: center;">无</div></td>
+                                    </tr>
+                                    <tr role="row" class="odd">
+                                        <td><div style="text-align: center;">2017-10-06</div></td>
+                                        <td><div style="text-align: center;">Angelia</div></td>
+                                        <td><div style="text-align: center;">主管初审</div></td>
+                                        <td><div style="text-align: center;">同意</div></td>
+                                    </tr>
+                                    <tr role="row" class="odd">
+                                        <td><div style="text-align: center;">2017-10-06</div></td>
+                                        <td><div style="text-align: center;">Abby</div></td>
+                                        <td><div style="text-align: center;">文员录入</div></td>
+                                        <td><div style="text-align: center;">完成</div></td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="/ueditor/ueditor.config.js"></script>
+    <script src="/ueditor/ueditor.all.js"> </script>
+    <script src="/ueditor/lang/zh-cn/zh-cn.js"> </script>
+    <script src="/js/backstage/supplier_add.js">
+    <script>
+
+        $("#flow_img").on("click",function(){
+            $("#addAreaModal").modal('show');
+        })
+
+        function CloseWebPage(){
+            $(".nav-main ul .close-page").trigger("click");
+        }
+        $('.close').on('click',function(){
+            $("#addClassModal").modal('hide');
+            $("#addDataModal").modal('hide');
+            $("#addQuestionsModal").modal('hide');
+        })
+
+
+        UE.delEditor('editor');
+        //实例化编辑器
+        //建议使用工厂方法getEditor创建和引用编辑器实例，如果在某个闭包下引用该编辑器，直接调用UE.getEditor('editor')就能拿到相关的实例
+        var ue = UE.getEditor('editor');
+        function setContent(content,isAppendTo) {
+            UE.getEditor('editor').setContent(content, isAppendTo);
+        }
+        function getContent() {
+            return UE.getEditor('editor').getContent();
+        }
+
+    </script>
+    <!--私有js-->
+<!--    <script src="js/backstage/product_add.js"></script>-->
+    <!--end-->
+</div>

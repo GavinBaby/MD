@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <title>美度贸易</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+  <!-- 椤甸潰css鏍峰紡 -->
+  <link rel="stylesheet" href="../css/depei.css" />
+
+  <!-- js鏂囦欢 -->
+  <script src="/js/jquery-2.1.4.min.js"></script>
+  <script src="/js/imgValidate.js"></script>
+  <link rel="stylesheet" href="/css/imgValidate.css" />
+<style>
+
+  html,body{
+    margin:0px;
+    height:100%;
+  }
+  .bg{
+    background:url(/images/login_bg.png)no-repeat;
+    width:100%;
+    height:100%;
+    background-size:100% 100%;
+    position:absolute;
+    opacity:0.8;
+    filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='bg-login.png',sizingMethod='scale');
+  }
+  .login_cd{
+    width: 400px;
+    height: 300px;
+    left:50%;
+    margin-left: -200px;
+    top:60%;
+    margin-top: -150px;
+    position: absolute;
+    background-color: #FFFFFF;
+    box-shadow: 10px 10px 5px #888888;
+    border-radius:5px;
+    opacity:0.9;
+  }
+  .div_cd{
+/*    position: relative;*/
+    width: 240px;
+    text-align: center;
+    height: 50px;
+    margin-left: 80px;
+    margin-top: 20px;
+  }
+  .input_cd{
+    background: #eeeeee;
+    width: 100%;
+    height: 100%;
+    border: 0;
+    -webkit-appearance: none;
+  }
+</style>
+</head>
+<body style="word-warp:break-word; word-break:break-all;margin:0px;">
+<div class="bg" style="height: 100%;">
+  <div style="box-shadow:0 2px 0 #A1515A;height: 80px;width: 90%;margin-left: 5%;margin-right: 5%;">
+    <div style="-webkit-text-stroke:1px #A85D66;text-stroke:1px #A85D66;font-size: 40px;color: #FFFFFF;text-align:center;letter-spacing: 7.5px;padding-top: 10px;">美度贸易·进销存管理系统</div>
+  </div>
+  <div style="width: 1280px;height: 720px;left:50%;margin-left: -640px;position: absolute;margin-top: -70px;">
+    <div class="login_cd">
+      <div style="height: 54px;width: 100%;font-size: 24px;font-weight:bold;font-family:'寰蒋闆呴粦';line-height: 70px;text-align: center;letter-spacing: 2px;opacity:1;"><img src="/images/login_title.png" style="width: 144px;height: 95px;margin-top:-10px;"></div>
+      <div style="height: auto;width: 100%;">
+        <form method="post" role="form" action="/login" id="loginform">
+          <div class="div_cd">
+            <input style="padding-left:10px;border-radius:5px;height: 40px;font-size: 16px;"  name="username" id="username"  type="text" class="input_cd" placeholder="用户名" maxlength="64"/>
+          </div>
+          <div class="div_cd" style="margin-top: 14px">
+            <input style="padding-left:10px;border-radius:5px;height: 40px;font-size: 16px;" name="password" id="password" type="password" class="input_cd" placeholder="密码" maxlength="64"/>
+          </div>
+        </form>
+        <!--<div style="float: left;width: 84px;height: 35px;background: url('../images/code.png') no-repeat;margin:12px 0px 0px 10px;"></div>-->
+        <a href="javascript:void(0);">
+          <div id="login" style="opacity:1;border-radius:5px; float: left;width: 240px;height: 50px;background: #DF9966;margin-left:80px;margin-top:30px;color: white;line-height: 48px;text-align: center;font-size: 22px;letter-spacing: 3px;cursor:pointer;">登录</div>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>
+<script type="text/javascript">
+  var code = '<%=code%>';
+  var text = '<%=text%>';
+  if(code==1){
+    alert(text);
+  }
+  createCode();
+  $("#login").on("click",function(){
+    $("#loginform").submit();
+    /*if(validateCode()){
+      //楠岃瘉鐮�
+      $("#loginform").submit();
+    }*/
+  });
+  // 回车时间捕捉
+  $(document).keyup(function (e) {//捕获文档对象的按键弹起事件
+      if (e.keyCode == 13) {//按键信息对象以参数的形式传递进来了
+          //此处编写用户敲回车后的代码
+          $("#login").click();
+      }
+  });
+</script>

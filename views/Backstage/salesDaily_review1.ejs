@@ -1,0 +1,320 @@
+<div id="watermeter_page">
+    <input type="hidden" id="seq_no_edit">
+    <input type="hidden" id="name_edit">
+    <!--start-->
+    <div style="float: left;width: 98%;margin: 20px 0px 0px 20px ">
+        <div style="width: 100%;height: 74px;background: #f3f3f3;border: 1px solid #e4e4e4;line-height: 74px">
+            <div style="width: 90%;float: left">
+
+                <style>
+                    .div_row label{
+                        float: left;
+                        display: inline-block;
+                        text-align: right;
+                        margin-right: 5px;
+                    }
+                    .div_wrapper{
+                        overflow: hidden;
+                        margin-bottom: 8px;
+                    }
+                    .div_wrapper input,.div_wrapper select{
+                        box-sizing: border-box;
+                        border: 1px solid #dfdfdf;
+                        width: 100%;
+                        height: 30px;
+                        outline: medium;
+                    }
+                </style>
+
+                <div class="div_row" style="width: 20%;float: left;">
+                    <label style="font-size: 14px;color: #666666;padding-left: 14px">日报编号</label>
+                    <div class="div_wrapper">
+                        <input name="id_q" id="id_q" >
+                    </div>
+                </div>
+                <div class="div_row" style="width: 20%;float: left;">
+                    <label style="font-size: 14px;color: #666666;padding-left: 14px">汇报人</label>
+                    <div class="div_wrapper">
+                        <input name="name_q" id="name_q">
+                    </div>
+                </div>
+                <div class="div_row" style="width: 20%;float: left">
+                    <label style="font-size: 14px;color: #666666;padding-left: 14px">汇报日期</label>
+                    <div class="div_wrapper">
+                        <input name="userid_q" id="userid_q">
+                    </div>
+                </div>
+                <div class="div_row" style="width: 20%;float: left">
+                    <label style="font-size: 14px;color: #666666;padding-left: 14px">部门</label>
+                    <div class="div_wrapper">
+                        <input name="username_q" id="username_q"  >
+                    </div>
+                </div>
+                <div class="div_row" style="width: 20%;float: left ;">
+                    <label style="font-size: 14px;color: #666666;padding-left: 14px">审核人</label>
+                    <div class="div_wrapper">
+                        <input name="location_q" id="location_q" >
+                    </div>
+                </div>
+            </div>
+
+            <div style="width: 10%;float: left;margin-top: 0px">
+                <div id="employeeSeatchBut" style="cursor:pointer;float: right;width: 77px;height: 30px;background: url(../images/sousuo.png);margin: 22px 18px 0px 0px;font-size: 15px;color: white;line-height: 30px;text-align: center">搜索</div></div>
+        </div>
+        <div style="width: 100%;min-height: 320px;border: 1px solid #e4e4e4;margin-top: 12px;padding: 10px 0px 0px 10px">
+            <table class="table-style-1 table-style-1-a table-hover mb-0-5" id="area_Table">
+                <thead>
+                <tr class="sch">
+                    <td style="width: 12%;" align="center">
+                        <div class="t text-left" >日报编号
+                            <span class="sort-ico" style="padding-top:10px;"><i class="dot-top icon-caret-up"></i><i class="dot-bottom icon-caret-down"></i></span>
+                        </div>
+                    </td>
+                    <td style="width: 12%;" align="center">
+                        <div class="t">汇报人<span class="sort-ico" style="padding-top:10px;"><i class="dot-top icon-caret-up"></i><i class="dot-bottom icon-caret-down"></i></span></div>
+                    </td>
+                    <td style="width: 12%;" align="center">
+                        <div class="t">汇报日期<span class="sort-ico" style="padding-top:10px;"><i class="dot-top icon-caret-up"></i><i class="dot-bottom icon-caret-down"></i></span></div>
+                    </td>
+                    <td style="width: 12%;" align="center">
+                        <div class="t">部门<span class="sort-ico" style="padding-top:10px;"><i class="dot-top icon-caret-up"></i><i class="dot-bottom icon-caret-down"></i></span></div>
+                    </td>
+                    <td style="width: 12%;" align="center">
+                        <div class="t">审核人<span class="sort-ico" style="padding-top:10px;"><i class="dot-top icon-caret-up"></i><i class="dot-bottom icon-caret-down"></i></span></div>
+                    </td>
+                    <td style="width: 12%;" align="center">
+                        <div class="t">审核状态<span class="sort-ico" style="padding-top:10px;"><i class="dot-top icon-caret-up"></i><i class="dot-bottom icon-caret-down"></i></span></div>
+                    </td>
+                    <td style="width: 12%;" align="center">
+                        <div class="t">操作</div>
+                    </td>
+                </tr>
+                </thead>
+                <tbody>
+                <tr role="row" class="odd">
+                    <td><div style="text-align: center;">10001</div></td>
+                    <td><div style="text-align: center;">CD</div></td>
+                    <td><div style="text-align: center;">2017-10-15</div></td>
+                    <td><div style="text-align: center;">销售部</div></td>
+                    <td><div style="text-align: center;">David</div></td>
+                    <td><div style="text-align: center;">待审</div></td>
+                    <td><div style="text-align: center;"><a class="employee_edit" href="javascript:void(0)" data-no="10000000001" data-id="0" data-phone="13484218482" data-toggle="modal">审核</a></div></td>
+                </tr>
+                <tr role="row" class="odd">
+                    <td><div style="text-align: center;">10001</div></td>
+                    <td><div style="text-align: center;">CD</div></td>
+                    <td><div style="text-align: center;">2017-10-15</div></td>
+                    <td><div style="text-align: center;">销售部</div></td>
+                    <td><div style="text-align: center;">David</div></td>
+                    <td><div style="text-align: center;">待审</div></td>
+                    <td><div style="text-align: center;"><a class="employee_edit" href="javascript:void(0)" data-no="10000000001" data-id="0" data-phone="13484218482" data-toggle="modal">审核</a></div></td>
+                </tr>
+                <tr role="row" class="odd">
+                    <td><div style="text-align: center;">10001</div></td>
+                    <td><div style="text-align: center;">CD</div></td>
+                    <td><div style="text-align: center;">2017-10-15</div></td>
+                    <td><div style="text-align: center;">销售部</div></td>
+                    <td><div style="text-align: center;">David</div></td>
+                    <td><div style="text-align: center;">待审</div></td>
+                    <td><div style="text-align: center;"><a class="employee_edit" href="javascript:void(0)" data-no="10000000001" data-id="0" data-phone="13484218482" data-toggle="modal">审核</a></div></td>
+                </tr>
+                <tr role="row" class="odd">
+                    <td><div style="text-align: center;">10001</div></td>
+                    <td><div style="text-align: center;">CD</div></td>
+                    <td><div style="text-align: center;">2017-10-15</div></td>
+                    <td><div style="text-align: center;">销售部</div></td>
+                    <td><div style="text-align: center;">David</div></td>
+                    <td><div style="text-align: center;">待审</div></td>
+                    <td><div style="text-align: center;"><a class="employee_edit" href="javascript:void(0)" data-no="10000000001" data-id="0" data-phone="13484218482" data-toggle="modal">审核</a></div></td>
+                </tr>
+                <tr role="row" class="odd">
+                    <td><div style="text-align: center;">10001</div></td>
+                    <td><div style="text-align: center;">CD</div></td>
+                    <td><div style="text-align: center;">2017-10-15</div></td>
+                    <td><div style="text-align: center;">销售部</div></td>
+                    <td><div style="text-align: center;">David</div></td>
+                    <td><div style="text-align: center;">待审</div></td>
+                    <td><div style="text-align: center;"><a class="employee_edit" href="javascript:void(0)" data-no="10000000001" data-id="0" data-phone="13484218482" data-toggle="modal">审核</a></div></td>
+                </tr>
+                </tbody>
+            </table>
+            <nav class="pagination-wrap clearfix">
+                <!--<div class="ml-2 mt-1 mb-2">
+                    <a class="form-btn-upload" id="addStaffModal" data-toggle="modal"><i class="icon-plus-sign"></i>添加新表具</a>
+                </div>-->
+            </nav>
+        </div>
+    </div>
+
+
+
+    <!-- 添加集中器弹窗 -->
+    <div class="modal modal-noline fade" id="addAreaModal" tabindex="-1" role="dialog" aria-labelledby="addAccountModalLabel" aria-hidden="true">
+        <div class="modal-outer">
+            <div class="modal-middle">
+                <div class="modal-dialog modal-inner float-none" style="width:850px;">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal"></button>
+                        </div>
+                        <div class="modal-body p-1 pt-3 pl-5">
+
+                            <form class="form-horizontal" action="" method="post"   id="add_form">
+                                <input id="seq_no" type="hidden" name="seq_no">
+                                <input id="res" name="res" type="reset" style="display:none;" />
+                                <div class="form-group ">
+                                    <label class="control-label w-9" style="font-size: 29px;width: 165px;margin: 0px 0px 0 28px;">添加表具</label>
+                                </div>
+                                <div class="form-group ">
+                                    <label class="control-label w-12">所属小区：</label>
+                                    <div class="w-20 relative">
+                                        <select class="form-control" name="village" id="village"  disabled>
+                                        </select>
+                                    </div>
+                                    <label class="control-label w-12">表具编号：</label>
+                                    <div class="w-20 relative">
+                                        <input id="w_id" class="form-control" type="text" name="w_id" data-rule="表具编号:required;"  placeholder="请输入表具编号" maxlength="20">
+                                    </div>
+
+                                </div>
+                                <div class="form-group ">
+                                    <label class="control-label w-12">所属楼栋：</label>
+                                    <div class="w-20 relative">
+                                        <select class="form-control" name="build" id="build" >
+                                        </select>
+                                    </div>
+                                    <label class="control-label w-12">表具名称：</label>
+                                    <div class="w-20 relative">
+                                        <input id="w_name" class="form-control" type="text" name="w_name" data-rule="表具名称:required;" placeholder="请输入表具名称" maxlength="20">
+                                    </div>
+                                </div>
+
+                                <div class="form-group ">
+                                    <label class="control-label w-12">所属单元：</label>
+                                    <div class="w-20 relative">
+                                        <select class="form-control" name="unit" id="unit" >
+                                        </select>
+                                    </div>
+                                    <label class="control-label w-12">表具类型：</label>
+                                    <div class="w-20 relative">
+                                        <select class="form-control" name="type" id="type" >
+                                            <option value="1">小口径表</option>
+                                            <option value="2">大口径表</option>
+                                        </select>
+                                    </div>
+
+                                </div>
+
+                                <div class="form-group ">
+                                    <label class="control-label w-12">门牌号码：</label>
+                                    <div class="w-20">
+                                        <input id="doorplate" class="form-control" type="text" name="doorplate" placeholder="请输入门牌号码" maxlength="20">
+                                    </div>
+                                    <label class="control-label w-12">电池类型：</label>
+                                    <div class="w-20 relative">
+                                        <select class="form-control" name="batteryid" id="batteryid" >
+                                            <option value="1">锂电池</option>
+                                            <option value="2">铅酸电池</option>
+                                        </select>
+                                    </div>
+
+
+
+                                </div>
+                                <div class="form-group ">
+                                    <label class="control-label w-12">户主编号：</label>
+                                    <div class="w-20 relative">
+                                        <input id="userid" class="form-control" type="text" name="userid" data-rule="户主编号:required;" placeholder="请输入户主编号" maxlength="20">
+                                    </div>
+                                    <label class="control-label w-12">口径：</label>
+                                    <div class="w-20 ">
+                                        <input id="caliber" class="form-control" type="text" name="caliber"  placeholder="请输入口径" maxlength="20">
+                                    </div>
+
+
+                                </div>
+                                <div class="form-group ">
+                                    <label class="control-label w-12">户主名称：</label>
+                                    <div class="w-20 relative">
+                                        <input id="username" class="form-control" type="text" name="username" data-rule="户主名称:required;" placeholder="请输入户主名称" maxlength="20">
+                                    </div>
+                                    <label class="control-label w-12">脉冲常数：</label>
+                                    <div class="w-20 ">
+                                        <input id="imp" class="form-control" type="text" name="imp"  placeholder="请输入脉冲常数" maxlength="20">
+                                    </div>
+
+
+                                </div>
+                                <div class="form-group ">
+                                    <label class="control-label w-12">资产编号：</label>
+                                    <div class="w-20 ">
+                                        <input id="assetid" class="form-control" type="text" name="assetid"  placeholder="请输入资产编号" maxlength="20">
+                                    </div>
+
+
+                                    <label class="control-label w-12">上期读数：</label>
+                                    <div class="w-20 relative">
+                                        <input value="0" id="reading1" class="form-control" type="text" name="reading1" data-rule="上期读数:required;" placeholder="请输入上期读数" maxlength="9">
+                                    </div>
+                                </div>
+                                <div class="form-group ">
+                                    <label class="control-label w-12">用水性质：</label>
+                                    <div class="w-20 relative">
+                                        <select class="form-control" name="waterid" id="waterid" >
+                                            <option value="1">民用水</option>
+                                            <option value="2">工业用水</option>
+                                        </select>
+                                    </div>
+                                    <label class="control-label w-12">本期读数：</label>
+                                    <div class="w-20 relative">
+                                        <input value="0" id="reading2" class="form-control" type="text" name="reading2" data-rule="本期读数:required;" placeholder="请输入本期读数" maxlength="9">
+                                    </div>
+                                </div>
+
+                                <div class="modal-footer text-center pb-2">
+                                    <button type="button" class="btn btn-default btn-default-green w-14 font-16 float-none" data-dismiss="modal" id="add_account_cancel">取消</button>
+                                    <button id="save_area" type="button" class="btn btn-success w-14 font-16 float-none ml-2">保存</button>
+                                </div>
+
+                            </form>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 弹出删除确认信息 -->
+    <div style="width: 30%;margin: 0 auto" class="modal modal-noline fade" id="sureDel" tabindex="-1" role="dialog"
+         aria-labelledby="sureDelLabel" aria-hidden="true">
+        <div class="modal-middle">
+            <div class="modal-dialog-notice modal-inner">
+                <div class="modal-content">
+                    <div class="background-grey-2 p-1 indent-1 modal-dialog-notice-radius">
+                        <span class="font-20 wryh text-zdy-2">信息确认：</span>
+                    </div>
+                    <div class="p-3">
+                        <p class="text-center font-18 wryh text-gray-light">确认要删除该表具吗？</p>
+
+                        <div class="modal-footer text-center pb-2">
+                            <button type="button" class="btn btn-default btn-default-blue font-16 float-none"
+                                    data-dismiss="modal">取消
+                            </button>
+                            <button type="button" class="btn btn-primary font-16 float-none ml-1" id="del_button"
+                                    data-dismiss="modal">确定
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+<!--私有js-->
+<script>
+</script>
+<!--<script src="/js/table-ajax.js"></script>-->
+<!--<script src="/js/Backstage/watermeter.js"></script>-->
+<!--end-->

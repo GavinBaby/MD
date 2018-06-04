@@ -1,0 +1,356 @@
+<div id="product_add_page">
+    <!--start-->
+    <ol class="breadcrumb">
+        <div style="text-align: center;font-size: 16px;font-weight:bold;">促销活动申请单</div>
+    </ol>
+    <div class="main-box main-box-noborder overflow-hidden" style="padding-top: 12px;padding-left: 20px;">
+        <form class="form-horizontal" action="" method="post"   id="case_add_form">
+
+
+            <div class="form-group">
+                <label class="w-13 control-label" style="font-family: 微软雅黑;font-size: 16px">活动编号：</label>
+                <div class="w-12 relative ml-1">
+                    <input style="border-left-width:0px;border-top-width:0px;border-right-width:0px;border-bottom-color:black" id="product_name" class="form-control" type="text" name="home_title1" maxlength="12" value="12888" readonly>
+                </div>
+                <label class="w-13 control-label" style="font-family: 微软雅黑;font-size: 16px">申请日期：</label>
+                <div class="w-12 relative ml-1">
+                    <input style="border-left-width:0px;border-top-width:0px;border-right-width:0px;border-bottom-color:black" id="product_name" class="form-control" type="text" name="home_title1" maxlength="12" value="2017-10-05" readonly>
+                </div>
+                <label class="control-label" style="font-family: 微软雅黑;font-size: 16px;float: right;margin-right: 20px;"><a id="flow_img">查看流程图</a></label>
+            </div>
+            <div class="form-group">
+                <label class="w-13 control-label" style="font-family: 微软雅黑;font-size: 16px">活动名称：</label>
+                <div class="w-50 relative ml-1">
+                    <input style="border-left-width:0px;border-top-width:0px;border-right-width:0px;border-bottom-color:black" id="product_name" class="form-control" type="text" name="home_title1" maxlength="12" value="XX商超促销活动申请" >
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="w-13 control-label" style="font-family: 微软雅黑;font-size: 16px">活动日期：</label>
+                <div class="w-20 relative ml-1">
+                    <input style="border-left-width:0px;border-top-width:0px;border-right-width:0px;border-bottom-color:black" id="product_name" class="form-control" type="text" name="home_title1" maxlength="12" value="2017-10-15" >
+                </div>
+                <label class="w-5 control-label" style="font-family: 微软雅黑;font-size: 16px;text-align: center;">至</label>
+                <div class="w-20 relative ">
+                    <input style="border-left-width:0px;border-top-width:0px;border-right-width:0px;border-bottom-color:black" id="product_name" class="form-control" type="text" name="home_title1" maxlength="12" value="2017-12-15" >
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="w-13 control-label" style="float:left;font-family: 微软雅黑;font-size: 16px">：</label>
+                <div class="relative ml-1 " style="float: left;width:calc(100% - 200px);">
+                    <textarea class="form-control" rows="3" id="product_content" name="home_about_content" maxlength="1024" placeholder="" style="height: 120px"></textarea>
+                </div>
+            </div>
+            <div class="form-group">
+
+                <label class="w-13 control-label" style="font-family: 微软雅黑;font-size: 16px">付款日期：</label>
+                <div class="w-5 relative ml-1">
+                    <input style="border-left-width:0px;border-top-width:0px;border-right-width:0px;border-bottom-color:black" id="product_name" class="form-control" type="text" name="home_title1" maxlength="12" value="">
+                </div>
+                <label class="w-9 control-label" style="font-family: 微软雅黑;font-size: 16px">总金额：</label>
+                <div class="w-5 relative ml-1">
+                    <input style="border-left-width:0px;border-top-width:0px;border-right-width:0px;border-bottom-color:black" id="product_name" class="form-control" type="text" name="home_title1" maxlength="12" value="">
+                </div>
+                <label class="w-13 control-label" style="font-family: 微软雅黑;font-size: 16px">公司付款金额：</label>
+                <div class="w-5 relative ml-1">
+                    <input style="border-left-width:0px;border-top-width:0px;border-right-width:0px;border-bottom-color:black" id="product_name" class="form-control" type="text" name="home_title1" maxlength="12" value="">
+                </div>
+                <label class="w-13 control-label" style="font-family: 微软雅黑;font-size: 16px">厂商付款金额：</label>
+                <div class="w-5 relative ml-1">
+                    <input style="border-left-width:0px;border-top-width:0px;border-right-width:0px;border-bottom-color:black" id="product_name" class="form-control" type="text" name="home_title1" maxlength="12" value="">
+                </div>
+                <label class="w-13 control-label" style="font-family: 微软雅黑;font-size: 16px">财务结算金额：</label>
+                <div class="w-5 relative ml-1">
+                    <input style="border-left-width:0px;border-top-width:0px;border-right-width:0px;border-bottom-color:black" id="product_name" class="form-control" type="text" name="home_title1" maxlength="12" value="">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="w-13 control-label" style="float:left;font-family: 微软雅黑;font-size: 16px">主管初审：</label>
+                <label class="w-6 control-label" style="float:left;font-family: 微软雅黑;font-size: 16px;color: green;text-align: center;cursor:pointer;">同&nbsp;&nbsp;意</label>
+                <div style="float:left;width: 1px;height: 25px;line-height: 25px; background: #9DA2B0;margin-top: 5px;"></div>
+                <label class="w-6 control-label" style="float:left;font-family: 微软雅黑;font-size: 16px;color: red;text-align: center;margin-left: 10px;cursor:pointer;">驳&nbsp;&nbsp;回</label>
+                <label class="w-13 control-label" style="font-family: 微软雅黑;font-size: 16px">意见：</label>
+                <div class="relative ml-1" style="float: left;width:calc(100% - 460px);">
+                    <input style="border-left-width:0px;border-top-width:0px;border-right-width:0px;border-bottom-color:black" id="product_name" class="form-control" type="text" name="home_title1" maxlength="50" value="">
+                </div>
+            </div>
+
+
+            <div class="form-group">
+                <label class="w-13 control-label" style="font-family: 微软雅黑;font-size: 16px">活动签呈：</label>
+                <div class="msg text-gray-lighter font-12 mt-0-5">(请上传活动签呈)</div>
+                <div class="roompic-upload w-12" style="margin-top: 5px;">
+                    <a id="add_top_img1" href="#" class="form-btn-upload" >添加签呈</a>
+                    <div id="unknow" style="width:24px;height:18px;position: fixed;z-index: 999;margin: -44px 0 0 -56px;font-size:12px;overflow:hidden;color: white" hidden></div>
+                </div>
+            </div>
+
+
+            <div class="form-group"  style="margin-left:30px;">
+                <table class="table-style-1 table-style-1-a table-hover mb-0-5" id="area_Table">
+                    <thead>
+                    <tr class="sch">
+                        <td style="width: 7%;" align="center">
+                            <div class="t text-left" >商品编号
+                                <span class="sort-ico" style="padding-top:10px;"><i class="dot-top icon-caret-up"></i><i class="dot-bottom icon-caret-down"></i></span>
+                            </div>
+                        </td>
+                        <td style="width: 7%;" align="center">
+                            <div class="t">商品名称<span class="sort-ico" style="padding-top:10px;"><i class="dot-top icon-caret-up"></i><i class="dot-bottom icon-caret-down"></i></span></div>
+                        </td>
+                        <td style="width: 7%;" align="center">
+                            <div class="t">促销地点<span class="sort-ico" style="padding-top:10px;"><i class="dot-top icon-caret-up"></i><i class="dot-bottom icon-caret-down"></i></span></div>
+                        </td>
+                        <td style="width: 7%;" align="center">
+                            <div class="t">原价<span class="sort-ico" style="padding-top:10px;"><i class="dot-top icon-caret-up"></i><i class="dot-bottom icon-caret-down"></i></span></div>
+                        </td>
+                        <!--                    <td style="width: 8%;" align="center">
+                                                <div class="t">促销厂家<span class="sort-ico" style="padding-top:10px;"><i class="dot-top icon-caret-up"></i><i class="dot-bottom icon-caret-down"></i></span></div>
+                                            </td>
+                                            <td style="width: 8%;" align="center">
+                                                <div class="t">促销对象<span class="sort-ico" style="padding-top:10px;"><i class="dot-top icon-caret-up"></i><i class="dot-bottom icon-caret-down"></i></span></div>
+                                            </td>-->
+                        <td style="width: 7%;" align="center">
+                            <div class="t">促销价格<span class="sort-ico" style="padding-top:10px;"><i class="dot-top icon-caret-up"></i><i class="dot-bottom icon-caret-down"></i></span></div>
+                        </td>
+                        <td style="width: 7%;" align="center">
+                            <div class="t">拆零价<span class="sort-ico" style="padding-top:10px;"><i class="dot-top icon-caret-up"></i><i class="dot-bottom icon-caret-down"></i></span></div>
+                        </td>
+                        <td style="width: 7%;" align="center">
+                            <div class="t">满零数<span class="sort-ico" style="padding-top:10px;"><i class="dot-top icon-caret-up"></i><i class="dot-bottom icon-caret-down"></i></span></div>
+                        </td>
+                        <td style="width: 7%;" align="center">
+                            <div class="t">赠品编号<span class="sort-ico" style="padding-top:10px;"><i class="dot-top icon-caret-up"></i><i class="dot-bottom icon-caret-down"></i></span></div>
+                        </td>
+                        <td style="width: 7%;" align="center">
+                            <div class="t">赠品名称<span class="sort-ico" style="padding-top:10px;"><i class="dot-top icon-caret-up"></i><i class="dot-bottom icon-caret-down"></i></span></div>
+                        </td>
+                        <td style="width: 7%;" align="center">
+                            <div class="t">赠零数<span class="sort-ico" style="padding-top:10px;"><i class="dot-top icon-caret-up"></i><i class="dot-bottom icon-caret-down"></i></span></div>
+                        </td>
+                        <td style="width: 7%;" align="center">
+                            <div class="t">满金额<span class="sort-ico" style="padding-top:10px;"><i class="dot-top icon-caret-up"></i><i class="dot-bottom icon-caret-down"></i></span></div>
+                        </td>
+                        <td style="width: 7%;" align="center">
+                            <div class="t">减金额<span class="sort-ico" style="padding-top:10px;"><i class="dot-top icon-caret-up"></i><i class="dot-bottom icon-caret-down"></i></span></div>
+                        </td>
+                        <td style="width: 7%;" align="center">
+                            <div class="t">备注</div>
+                        </td>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr role="row" class="odd">
+                        <td><div style="text-align: center;">10001</div></td>
+                        <td><div style="text-align: center;">XX商品</div></td>
+                        <td><div style="text-align: center;">XX促销地点</div></td>
+                        <td><div style="text-align: center;">1</div></td>
+                        <td><div style="text-align: center;">1</div></td>
+                        <td><div style="text-align: center;">1</div></td>
+                        <td><div style="text-align: center;">1</div></td>
+                        <td><div style="text-align: center;">10001</div></td>
+                        <td><div style="text-align: center;">XX赠品</div></td>
+                        <td><div style="text-align: center;">1</div></td>
+                        <td><div style="text-align: center;">1</div></td>
+                        <td><div style="text-align: center;">1</div></td>
+                        <td><div style="text-align: center;">1</div></td>
+                    </tr>
+                    <tr role="row" class="odd">
+                        <td><div style="text-align: center;">10001</div></td>
+                        <td><div style="text-align: center;">XX商品</div></td>
+                        <td><div style="text-align: center;">XX促销地点</div></td>
+                        <td><div style="text-align: center;">1</div></td>
+                        <td><div style="text-align: center;">1</div></td>
+                        <td><div style="text-align: center;">1</div></td>
+                        <td><div style="text-align: center;">1</div></td>
+                        <td><div style="text-align: center;">10001</div></td>
+                        <td><div style="text-align: center;">XX赠品</div></td>
+                        <td><div style="text-align: center;">1</div></td>
+                        <td><div style="text-align: center;">1</div></td>
+                        <td><div style="text-align: center;">1</div></td>
+                        <td><div style="text-align: center;">1</div></td>
+                    </tr>
+
+                    </tbody>
+                </table>
+
+            </div>
+
+            <div class="form-group">
+                <label class="w-13 control-label" style="font-family: 微软雅黑;font-size: 16px">活动总结：</label>
+            </div>
+            <script id="editor" type="text/plain" style="width:calc(100% - 30px);height:300px;margin-left:20px;"></script>
+            <div class="form-group">
+                <label class="w-13 control-label" style="font-family: 微软雅黑;font-size: 16px">活动附件：</label>
+                <div class="msg text-gray-lighter font-12 mt-0-5">(请上传活动照片及相关材料)</div>
+                <div class="roompic-upload w-12" style="margin-top: 5px;">
+                    <a id="add_top_img1" href="#" class="form-btn-upload" >添加附件</a>
+                    <div id="unknow" style="width:24px;height:18px;position: fixed;z-index: 999;margin: -44px 0 0 -56px;font-size:12px;overflow:hidden;color: white" hidden></div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="w-13 control-label" style="float:left;font-family: 微软雅黑;font-size: 16px">主管终审：</label>
+                <label class="w-6 control-label" style="float:left;font-family: 微软雅黑;font-size: 16px;color: green;text-align: center;cursor:pointer;">同&nbsp;&nbsp;意</label>
+                <div style="float:left;width: 1px;height: 25px;line-height: 25px; background: #9DA2B0;margin-top: 5px;"></div>
+                <label class="w-6 control-label" style="float:left;font-family: 微软雅黑;font-size: 16px;color: red;text-align: center;margin-left: 10px;cursor:pointer;">驳&nbsp;&nbsp;回</label>
+                <label class="w-13 control-label" style="font-family: 微软雅黑;font-size: 16px">意见：</label>
+                <div class="relative ml-1" style="float: left;width:calc(100% - 460px);">
+                    <input style="border-left-width:0px;border-top-width:0px;border-right-width:0px;border-bottom-color:black" id="product_name" class="form-control" type="text" name="home_title1" maxlength="50" value="">
+                </div>
+            </div>
+
+
+
+            <!--<ol class="breadcrumb">
+                <div style="text-align: center;font-size: 16px;font-weight:bold;">审核意见</div>
+            </ol>-->
+<!--            <div class="form-group">
+                <label class="w-13 control-label" style="font-family: 微软雅黑;font-size: 16px">审核时间：</label>
+                <div class="w-12 relative ml-1">
+                    <input style="border-left-width:0px;border-top-width:0px;border-right-width:0px;border-bottom-color:black" id="product_name" class="form-control" type="text" name="home_title1" maxlength="12" value="2017-11-01">
+                </div>
+                <label class="w-13 control-label" style="font-family: 微软雅黑;font-size: 16px">审核人：</label>
+                <div class="w-12 relative ml-1">
+                    <input style="border-left-width:0px;border-top-width:0px;border-right-width:0px;border-bottom-color:black" id="product_name" class="form-control" type="text" name="home_title1" maxlength="12" value="CD">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="w-13 control-label" style="font-family: 微软雅黑;font-size: 16px">审核意见：</label>
+                <div class="w-100 relative ml-1 ">
+                    <textarea class="form-control" rows="3" id="product_content" name="home_about_content" maxlength="1024" placeholder="" style="height: 120px"></textarea>
+                </div>
+            </div>-->
+            <div class="modal-footer pb-2" style="text-align: center;">
+                <button type="button" class="btn btn-default btn-default-green w-14 font-16 float-none" data-dismiss="modal" id="add_account_cancel">保存</button>
+                <button id="save_product" type="button" class="btn btn-success w-14 font-16 float-none ml-2" >下一步</button>
+            </div>
+        </form>
+        <nav class="pagination-wrap clearfix" style="height: 20px;margin-top:-22px">
+        </nav>
+    </div>
+
+
+    <!-- 添加集中器弹窗 -->
+    <div class="modal modal-noline fade" id="addAreaModal" tabindex="-1" role="dialog" aria-labelledby="addAccountModalLabel" aria-hidden="true">
+        <div class="modal-outer">
+            <div class="modal-middle">
+                <div class="modal-dialog modal-inner float-none" style="width:850px;">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal"></button>
+                        </div>
+                        <div class="modal-body p-1 pt-3">
+                            <div class="form-group">
+                                <div class="form-group" >
+                                    <label class="control-label" style="font-size: 20px;width: 200px;margin: 0px 0px 0 5px;">流程图</label>
+                                </div>
+                            </div>
+                            <form class="form-horizontal " action="" method="post"   id="add_account_form">
+
+
+
+                            </form>
+                            <div class=" pb-2">
+                                <button  style="width:8%;margin-left:1%;margin-right: 1%;line-height: 20px;background-color: greenyellow;" id="init_card" type="button" class="btn   font-12 float-none ml-1 mr-1">活动申请</button>
+                                <img src="/images/card_arrow.jpg" style="width:5%;height: auto;">
+                                <button  style="width:8%;margin-left:1%;margin-right: 1%;line-height: 20px;background-color: greenyellow;" id="init_card" type="button" class="btn   font-12 float-none ml-1 mr-1">主管初审</button>
+                                <img src="/images/card_arrow.jpg" style="width:5%;height: auto;">
+                                <button style="width:8%;margin-left:1%;margin-right: 1%;line-height: 20px;background-color: gold;" id="write_card" type="button" class="btn   font-12 float-none ml-1 mr-1">文员录入</button>
+                                <img src="/images/card_arrow.jpg" style="width:5%;height: auto;">
+                                <button style="width:8%;margin-left:1%;margin-right: 1%;line-height: 20px;" id="write_card" type="button" class="btn   font-12 float-none ml-1 mr-1">跟踪总结</button>
+                                <img src="/images/card_arrow.jpg" style="width:5%;height: auto;">
+                                <button style="width:8%;margin-left:1%;margin-right: 1%;line-height: 20px;" id="write_card" type="button" class="btn   font-12 float-none ml-1 mr-1">主管终审</button>
+                                <img src="/images/card_arrow.jpg" style="width:5%;height: auto;">
+                                <button style="width:8%;margin-left:1%;line-height: 20px;" id="write_card" type="button" class="btn   font-12 float-none ml-1 mr-1">财务终审</button>
+                            </div>
+
+
+                            <div class="form-group"  style="margin-left:5px;">
+                                <table class="table-style-1 table-style-1-a table-hover mb-0-5" id="area_Table">
+                                    <thead>
+                                    <tr class="sch">
+                                        <td style="width: 7%;" align="center">
+                                            <div class="t text-left" >操作时间
+                                                <span class="sort-ico" style="padding-top:10px;"><i class="dot-top icon-caret-up"></i><i class="dot-bottom icon-caret-down"></i></span>
+                                            </div>
+                                        </td>
+                                        <td style="width: 7%;" align="center">
+                                            <div class="t">处理人<span class="sort-ico" style="padding-top:10px;"><i class="dot-top icon-caret-up"></i><i class="dot-bottom icon-caret-down"></i></span></div>
+                                        </td>
+                                        <td style="width: 7%;" align="center">
+                                            <div class="t">环节名称<span class="sort-ico" style="padding-top:10px;"><i class="dot-top icon-caret-up"></i><i class="dot-bottom icon-caret-down"></i></span></div>
+                                        </td>
+                                        <td style="width: 7%;" align="center">
+                                            <div class="t">备注<span class="sort-ico" style="padding-top:10px;"><i class="dot-top icon-caret-up"></i><i class="dot-bottom icon-caret-down"></i></span></div>
+                                        </td>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr role="row" class="odd">
+                                        <td><div style="text-align: center;">2017-10-05</div></td>
+                                        <td><div style="text-align: center;">CD</div></td>
+                                        <td><div style="text-align: center;">活动申请</div></td>
+                                        <td><div style="text-align: center;">无</div></td>
+                                    </tr>
+                                    <tr role="row" class="odd">
+                                        <td><div style="text-align: center;">2017-10-06</div></td>
+                                        <td><div style="text-align: center;">Angelia</div></td>
+                                        <td><div style="text-align: center;">主管初审</div></td>
+                                        <td><div style="text-align: center;">同意</div></td>
+                                    </tr>
+                                    <tr role="row" class="odd">
+                                        <td><div style="text-align: center;">2017-10-06</div></td>
+                                        <td><div style="text-align: center;">Abby</div></td>
+                                        <td><div style="text-align: center;">文员录入</div></td>
+                                        <td><div style="text-align: center;">完成</div></td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="/ueditor/ueditor.config.js"></script>
+    <script src="/ueditor/ueditor.all.js"> </script>
+    <script src="/ueditor/lang/zh-cn/zh-cn.js"> </script>
+    <script>
+
+        $("#flow_img").on("click",function(){
+            $("#addAreaModal").modal('show');
+        })
+
+
+        function CloseWebPage(){
+            $(".nav-main ul .close-page").trigger("click");
+        }
+        $('.close').on('click',function(){
+            $("#addClassModal").modal('hide');
+            $("#addDataModal").modal('hide');
+            $("#addQuestionsModal").modal('hide');
+        })
+
+
+        UE.delEditor('editor');
+        //实例化编辑器
+        //建议使用工厂方法getEditor创建和引用编辑器实例，如果在某个闭包下引用该编辑器，直接调用UE.getEditor('editor')就能拿到相关的实例
+        var ue = UE.getEditor('editor');
+        function setContent(content,isAppendTo) {
+            UE.getEditor('editor').setContent(content, isAppendTo);
+        }
+        function getContent() {
+            return UE.getEditor('editor').getContent();
+        }
+
+    </script>
+    <!--私有js-->
+<!--    <script src="js/backstage/product_add.js"></script>-->
+    <!--end-->
+</div>
